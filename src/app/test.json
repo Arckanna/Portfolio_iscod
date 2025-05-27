@@ -1,0 +1,92 @@
+{
+    "name": "Portfolio - Projet Diplome",
+    "lists": [
+        {
+            "name": "Backlog",
+            "cards": [
+                {
+                    "name": "Definir l'objectif principal du portfolio"
+                },
+                {
+                    "name": "Definir les cibles du portfolio"
+                },
+                {
+                    "name": "Definir les sections principales du site"
+                },
+                {
+                    "name": "Choisir 3 a 5 projets a presenter"
+                },
+                {
+                    "name": "Rediger un texte de presentation personnelle"
+                },
+                {
+                    "name": "Resumer ton parcours de formation"
+                },
+                {
+                    "name": "Lister toutes tes competences"
+                },
+                {
+                    "name": "Preparer un plan de navigation du site"
+                },
+                {
+                    "name": "Installer un projet Angular ou HTML/CSS/JS"
+                },
+                {
+                    "name": "Creer la page Accueil"
+                },
+                {
+                    "name": "Creer la page Parcours"
+                },
+                {
+                    "name": "Creer la page Competences"
+                },
+                {
+                    "name": "Creer la page Projets"
+                },
+                {
+                    "name": "Creer la page Contact"
+                },
+                {
+                    "name": "Ajouter un menu de navigation"
+                },
+                {
+                    "name": "Ajouter un footer avec lien LinkedIn/GitHub"
+                },
+                {
+                    "name": "Verifier le responsive mobile/tablette/desktop"
+                },
+                {
+                    "name": "Tester tous les liens internes"
+                },
+                {
+                    "name": "Tester l'accessibilite"
+                },
+                {
+                    "name": "Mettre en ligne le site"
+                },
+                {
+                    "name": "Faire une revue finale du site"
+                },
+                {
+                    "name": "Preparer une petite demo pour la soutenance"
+                }
+            ]
+        },
+        {
+            "name": "A faire ce mois-ci",
+            "cards": []
+        },
+        {
+            "name": "En cours",
+            "cards": []
+        },
+        {
+            "name": "A tester",
+            "cards": []
+        },
+        {
+            "name": "Termine",
+            "cards": []
+        }
+    ]
+}

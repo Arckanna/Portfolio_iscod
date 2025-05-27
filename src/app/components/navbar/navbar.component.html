@@ -1,0 +1,21 @@
+<mat-toolbar class="navbar">
+  <div class="navbar-container">
+    <a mat-button routerLink="/" class="logo">
+      <span class="name">Votre Nom</span>
+      <span class="title">Expert en Ingénierie du Logiciel</span>
+    </a>
+
+    <div class="nav-links">
+      <a
+        mat-button
+        *ngFor="let item of navItems"
+        [routerLink]="item.path"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <mat-icon>{{ item.icon }}</mat-icon>
+        <span>{{ item.label }}</span>
+      </a>
+    </div>
+  </div>
+</mat-toolbar>
