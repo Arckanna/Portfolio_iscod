@@ -30,4 +30,4 @@ jobs:
           branch: gh-pages
           folder: dist/portfolio
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
