@@ -1,13 +1,34 @@
+/* navbar.component.scss - mise à jour avec les variables du thème */
+
+@use '../../../styles/theme' as *;
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1.5rem;
+  margin-bottom: 0;
+  background-color: $color-primary-light;
+  color:  $color-text-on-primary;
 
-  .brand {
-    font-size: 1.3rem;
-    font-weight: bold;
-    letter-spacing: 0.5px;
+  .brand-block {
+    display: flex;
+    align-items: center;
+
+    .vl-icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 5px;
+    }
+
+    .brand {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-right: 5px;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: #eee;
+    }
   }
 
   .nav-links {
@@ -15,34 +36,8 @@
     gap: 1rem;
 
     a {
-      color: white;
-      font-weight: 500;
+      color: #1a1a1a;
       text-decoration: none;
-
-      &.active {
-        background-color: rgba(255, 255, 255, 0.2);
-        border-radius: 4px;
-      }
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    width: 100%;
-    background: #1976d2;
-    display: none;
-
-    &.open {
-      display: flex;
-    }
-
-    a {
-      padding: 1rem;
     }
   }
 }
