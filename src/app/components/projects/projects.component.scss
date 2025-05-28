@@ -1,0 +1,51 @@
+/* projects.component.scss */
+
+@use '../../../styles/theme' as *;
+
+.projects-container {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: $color-text-on-primary;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: $color-primary-dark;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    justify-items: center;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .project-card {
+    background-color: $color-primary-light;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 340px;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+
+    h3 {
+      margin-top: 0;
+      color: $color-primary-dark;
+      font-size: 1.3rem;
+    }
+
+    p {
+      margin: 0.5rem 0 0;
+      font-size: 1rem;
+    }
+  }
+}

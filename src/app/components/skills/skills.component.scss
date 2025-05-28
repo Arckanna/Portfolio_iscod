@@ -1,0 +1,50 @@
+/* skills.component.scss */
+
+@use '../../../styles/theme' as *;
+
+.skills-container {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: $color-text-on-primary;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: $color-primary-dark;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  .skill-category {
+    background-color: $color-primary-light;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+    h3 {
+      color: $color-primary-dark;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        padding: 0.25rem 0;
+      }
+    }
+  }
+}
