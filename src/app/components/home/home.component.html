@@ -1,34 +1,35 @@
 <div class="home-container">
   <!-- Bloc haut avec image et présentation brève -->
-  <div class="presentation-block">
-    <div class="photo">
+  <div class="presentation-block" @staggerFadeInUp>
+    <div class="photo fade-item" >
       <img src="assets/images/profile.png" alt="Photo de profil" />
     </div>
 
-    <div class="intro">
-      <h1>Valérie Lecoeur</h1>
-      <p class="subtitle">Expert en Ingénierie du Logiciel</p>
-      <p>
+    <div class="intro" >
+      <h1 class="fade-item">Valérie Lecoeur</h1>
+      <p class="subtitle fade-item">Expert en Ingénierie du Logiciel</p>
+      <p class="fade-item">
           Expert en ingénierie logicielle avec une spécialisation en
           développement full-stack et architecture logicielle. Passionnée par les
           nouvelles technologies et l'innovation dans le développement logiciel.
       </p>
-      <button mat-raised-button color="primary">Me contacter</button>
+      <button mat-raised-button class="contact-button fade-item">Me contacter</button>
+
     </div>
   </div>
 
   <!-- Bloc "À propos" -->
-  <div class="about-section">
-    <h2>À propos</h2>
-    <p>
+  <div class="about-section" @staggerFadeInUp>
+    <p class="subtitle fade-item">À propos</p>
+    <p class="fade-item">
       Voici un résumé de mon parcours et de mes compétences principales acquises durant ma formation.
     </p>
 
     <div class="about-buttons">
-      <a href="assets/files/cv.pdf" download>
-        <button mat-stroked-button color="accent">CV téléchargeable</button>
+      <a href="assets/files/cv.pdf" download class="fade-item">
+        <button mat-stroked-button class="cv-button">CV téléchargeable</button>
       </a>
-      <button mat-stroked-button routerLink="/competences">Compétences</button>
+      <button mat-stroked-button routerLink="/competences" class="fade-item competences-button">Compétences</button>
     </div>
   </div>
 </div>

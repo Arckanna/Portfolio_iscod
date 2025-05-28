@@ -1,42 +1,28 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import {
+  trigger,
+  query,
+  style,
+  transition,
+  animate,
+  stagger
+} from '@angular/animations';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  animations: [
+    trigger('staggerFadeInUp', [
+      transition(':enter', [
+        query('.fade-item', [
+          style({ opacity: 0, transform: 'translateY(20px)' }),
+          stagger(200, [
+            animate('600ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
+          ])
+        ], { optional: true })
+      ])
+    ])
+  ]
 })
-export class HomeComponent {
-  domains = [
-    {
-      name: 'Intégration & Déploiement',
-      icon: 'integration_instructions',
-      route: '/integration',
-      class: 'integration-button'
-    },
-    {
-      name: 'Architecture Logicielle',
-      icon: 'architecture',
-      route: '/architecture',
-      class: 'architecture-button'
-    },
-    {
-      name: 'Gestion Client',
-      icon: 'groups',
-      route: '/gestion',
-      class: 'gestion-button'
-    },
-    {
-      name: 'Pilotage de Projet',
-      icon: 'trending_up',
-      route: '/pilotage',
-      class: 'pilotage-button'
-    }
-  ];
-
-  constructor(private router: Router) {}
-
-  navigate(route: string): void {
-    this.router.navigate([route]);
-  }
-} 
+export class HomeComponent {}

@@ -1,0 +1,26 @@
+/* styles/theme.scss */
+
+$color-primary-light: #d1c4e9;  // Mauve clair (fond navbar, titres)
+$color-primary: #9575cd;        // Mauve standard (boutons secondaires)
+$color-primary-dark: #7e57c2;   // Mauve soutenu (boutons principaux)
+$color-accent: #f06292;         // Rose (CV téléchargeable)
+$color-text-on-primary: #1a1a1a;
+$color-text-light: white;
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
+  color: $color-text-on-primary;
+}
+
+/* Correction style global forcé */
+.custom-primary.mat-stroked-button {
+  border-color: $color-primary !important;
+  color: $color-primary !important;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $color-primary-light !important;
+    color: $color-text-on-primary !important;
+  }
+}
