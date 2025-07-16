@@ -8,6 +8,11 @@
   margin-bottom: 0;
   background-color: $color-primary-light;
   color:  $color-text-on-primary;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 
   .brand-block {
     display: flex;
@@ -16,18 +21,20 @@
     .vl-icon {
       width: 32px;
       height: 32px;
-      margin-right: 5px;
+      margin-right: 20px;
     }
 
     .brand {
       font-weight: bold;
       font-size: 1.2rem;
-      margin-right: 5px;
+      margin-right: 25px;
+      margin-top: 15px;
     }
 
     .subtitle {
       font-size: 0.9rem;
-      color: #eee;
+      margin-top: 15px;
+      color: $color-text-on-primary;
     }
   }
 
