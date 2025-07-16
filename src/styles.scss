@@ -1,4 +1,3 @@
-@import '@angular/material/prebuilt-themes/indigo-pink.css';
 @import 'styles/theme';
 
 html, body {
@@ -14,6 +13,10 @@ html, body, app-root, .main-content {
   width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 // Styles globaux pour Material

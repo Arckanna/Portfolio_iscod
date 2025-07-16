@@ -10,7 +10,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
-import { ContactComponent } from './components/contact/contact.component';
+import { ContactComponent } from './components/contact/contact.component'
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { ScrollRevealDirective } from './shared/scroll-reveal.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ContactComponent } from './components/contact/contact.component';
     HomeComponent,
     SkillsComponent,
     ProjectsComponent,
-    ContactComponent
+    ContactComponent,
+    LandingPageComponent,
+    ScrollRevealDirective
   ],
   imports: [
     BrowserModule,
