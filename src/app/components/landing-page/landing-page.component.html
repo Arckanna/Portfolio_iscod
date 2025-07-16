@@ -1,0 +1,45 @@
+
+<!-- landing-page.component.html : structure SPA -->
+<app-navbar></app-navbar>
+
+<main class="landing-container">
+
+  <section id="accueil">
+    <app-home></app-home>
+  </section>
+
+  <section id="apropos">
+    <div class="section-wrapper">
+      <h2>À propos</h2>
+      <p>Je suis Valérie Lecoeur, passionnée par l’ingénierie logicielle, avec une expertise en Angular, Spring Boot et la conception logicielle moderne. Mon objectif : créer des applications utiles, solides et maintenables.</p><div class="about-section" @staggerFadeInUp>
+
+      <p>
+        Voici un résumé de mon parcours et de mes compétences principales acquises durant ma formation.
+      </p>
+
+      <div class="about-buttons">
+        <a href="assets/files/cv.pdf" download class="fade-item">
+          <button mat-stroked-button class="cv-button">CV téléchargeable</button>
+        </a>
+        <button mat-stroked-button routerLink="/competences" class="fade-item competences-button">Compétences</button>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="projets" class="animate-on-load">
+    <h2>Mes projets</h2>
+    <app-projects></app-projects>
+  </section>
+
+  <section id="competences">
+    <h2>Compétences</h2>
+    <app-skills></app-skills>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <app-contact></app-contact>
+  </section>
+
+</main>
