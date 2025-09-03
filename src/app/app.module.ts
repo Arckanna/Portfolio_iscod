@@ -13,6 +13,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component'
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { ScrollRevealDirective } from './shared/scroll-reveal.directive';
+import {ExperienceComponent} from "./components/experience/experience.component";
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ScrollRevealDirective } from './shared/scroll-reveal.directive';
     SkillsComponent,
     ProjectsComponent,
     ContactComponent,
+    ExperienceComponent,
     LandingPageComponent,
     ScrollRevealDirective
   ],

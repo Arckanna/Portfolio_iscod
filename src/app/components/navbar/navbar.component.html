@@ -1,17 +1,15 @@
-<mat-toolbar color="primary" class="navbar">
-  <div class="brand-block" @brandIntro>
-    <mat-icon svgIcon="vl-icon" class="vl-icon"></mat-icon>
-    <span class="brand" > Valérie Lecoeur </span>
-    <span class="subtitle" > Experte en ingénierie du logiciel</span>
+<nav class="topnav">
+  <div class="topnav__inner">
+    <a href="#accueil"     [class.active]="active==='accueil'">/ Accueil</a>
+    <a href="#competences" [class.active]="active==='competences'">/ Compétences</a>
+    <a href="#projets"     [class.active]="active==='projets'">/ Projets</a>
+    <a href="#experience"  [class.active]="active==='experience'">/ Expérience</a>
+    <a href="#contact"     [class.active]="active==='contact'">/ Contact</a>
+
+    <span class="spacer"></span>
+
+    <a href="https://github.com/Arckanna" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/valerie-lecoeur" target="_blank">LinkedIn</a>
   </div>
+</nav>
 
-  <span class="spacer"></span>
-
-  <nav class="nav-links">
-    <a mat-button href="#accueil">Accueil</a>
-    <a mat-button href="#apropos">A propos</a>
-    <a mat-button href="#projets">Projets</a>
-    <a mat-button href="#competences">Compétences</a>
-    <a mat-button href="#contact">Contact</a>
-  </nav>
-</mat-toolbar>
