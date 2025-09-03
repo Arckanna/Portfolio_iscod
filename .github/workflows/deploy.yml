@@ -11,23 +11,39 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Build Angular app
-        run: npm run build -- --base-href "/Portfolio_iscod/"
+      - name: Build Angular app (production with base-href)
+        run: npm run build -- --configuration production --base-href "/Portfolio_iscod/"
+
+      - name: Detect dist folder (Angular 16/17+ compatibility)
+        id: distdir
+        shell: bash
+        run: |
+          # Essaie Angular 17+ (browser), sinon fallback Angular <17
+          if ls dist/*/browser/index.html 1> /dev/null 2>&1; then
+            echo "dist=dist/$(ls dist)/browser" >> $GITHUB_OUTPUT
+          else
+            echo "dist=dist/$(ls dist)" >> $GITHUB_OUTPUT
+          fi
+          echo "Using dist: $(cat $GITHUB_OUTPUT)"
+
+      - name: Add SPA 404 fallback
+        shell: bash
+        run: cp "${{ steps.distdir.outputs.dist }}/index.html" "${{ steps.distdir.outputs.dist }}/404.html"
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: dist/portfolio
-        env:
-          token: ${{ secrets.GH_TOKEN }}
+          folder: ${{ steps.distdir.outputs.dist }}
+        # Le GITHUB_TOKEN par défaut suffit, pas besoin d'un secret custom
