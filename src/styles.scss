@@ -1,45 +1,147 @@
-@import 'styles/theme';
+/* === Thème global (sobre & moderne) === */
+:root{
+  --bg:#0B0F14;           /* fond sombre */
+  --text:#E6EDF3;         /* texte principal */
+  --muted:#8892B0;        /* texte secondaire */
+  --accent:#64FFDA;       /* couleur d’accent */
+  --border:#1F2937;       /* gris foncé */
+  --card:#0f141b;         /* fond cartes */
+}
 
 html, body {
-  height: 100%;
+  background: var(--bg);
+  color: var(--text);
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Roboto, system-ui, -apple-system, Segoe UI, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
+html { scroll-behavior: smooth; }
 
-html, body, app-root, .main-content {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-  box-sizing: border-box;
+/* décaler le contenu sous la navbar fixe */
+.page-content { padding-top: 56px; }
+section { scroll-margin-top: 64px; }
+
+/* Liens & focus */
+a { color: inherit; text-decoration: none; }
+a:hover { opacity: 0.95; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* === NAVBAR (tu as déjà le composant) === */
+.topnav {
+  position: fixed; inset: 0 0 auto 0; height: 56px;
+  backdrop-filter: blur(6px);
+  background: rgba(15,18,22,0.6);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
 }
-
-html {
-  scroll-behavior: smooth;
+.topnav__inner {
+  max-width: 1000px; margin: 0 auto; height: 56px;
+  display: flex; align-items: center; gap: 16px; padding: 0 16px;
+  font-size: 14px;
 }
+.topnav a { opacity: 0.85; }
+.topnav a:hover { opacity: 1; }
+.topnav a.active { color: var(--accent); opacity: 1; }
+.spacer { flex: 1; }
 
-// Styles globaux pour Material
-.mat-typography {
-  h1 {
-    margin: 0 0 16px;
+/* === Sections génériques === */
+.landing-container { max-width: 1000px; margin: 0 auto; }
+section { padding: 56px 16px; }
+.section { padding: 56px 16px; }
+.section-tag { color: var(--accent); letter-spacing: .02em; font-size: 14px; }
+.section-title {
+  font-weight: 600;
+  font-size: clamp(24px, 3vw, 32px);
+  margin: 6px 0 12px 0;
+}
+.hero {
+  min-height: 72vh; display: flex; align-items: center; padding: 0 16px;
+}
+.tagline { color: var(--muted); margin-top: 8px; }
+.cta a { border:1px solid var(--border); padding:10px 14px; border-radius: 12px; display:inline-block; margin-right: 8px; }
+.cta a:first-child { border-color: color-mix(in srgb, var(--accent) 60%, transparent); background: color-mix(in srgb, var(--accent) 12%, transparent); }
+
+/* === Grilles rapides (si tu as des listes de cartes) === */
+.grid-2 { display: grid; grid-template-columns: 1fr; gap: 16px; }
+@media (min-width: 880px){ .grid-2 { grid-template-columns: 1fr 1fr; } }
+
+/* === EXPÉRIENCE — Timeline compacte === */
+.timeline { border-left: 2px solid var(--border); margin-top: 24px; }
+.timeline-item { position: relative; padding-left: 20px; margin: 0 0 22px 0; }
+.timeline-item::before{
+  content:""; position:absolute; left:-7px; top:6px;
+  width:12px; height:12px; border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+}
+.timeline-dates { color: var(--muted); font-size: 13px; }
+.timeline-title { font-weight: 600; margin: 4px 0 4px; }
+.timeline-points { margin: 6px 0 0 0; padding-left: 18px; color: var(--muted); }
+.timeline-points li { margin: 4px 0; }
+
+/* === PROJETS — Cartes (Material ou HTML simple) === */
+/* Si tu utilises Angular Material */
+section#projets .mat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: none;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+section#projets .mat-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+}
+section#projets img { width: 100%; border-radius: 12px; display:block; }
+
+/* Si ce n’est PAS du Material, styles génériques d’<article> */
+section#projets article {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+section#projets article:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+}
+section#projets article img { width:100%; display:block; aspect-ratio: 16/9; object-fit: cover; }
+
+/* Boutons de liens (demo/code) */
+.links { display:flex; gap:16px; margin-top: 8px; }
+.links a { text-decoration: underline; text-underline-offset: 3px; }
+
+/* === COMPÉTENCES — cartes simples === */
+.skill-cards { display:grid; grid-template-columns: 1fr; gap:16px; }
+@media (min-width: 880px){ .skill-cards { grid-template-columns: repeat(3, 1fr); } }
+.skill-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+}
+.skill-card h3 { margin: 0 0 6px 0; }
+.skill-card p { color: var(--muted); margin: 0; }
+
+/* === CONTACT minimal === */
+.section--contact { text-align:center; }
+.section--contact .buttons { display:flex; justify-content:center; gap:12px; margin-top:14px; }
+.section--contact .buttons a {
+  border:1px solid var(--border); padding:10px 14px; border-radius:12px;
+}
+.section--contact .buttons a:hover { background:#0e131a; }
+
+/* === Helpers spacing === */
+.mt-2{ margin-top: 8px; } .mt-3{ margin-top: 12px; } .mt-4{ margin-top: 16px; } .mt-6{ margin-top: 24px; }
+@media (prefers-reduced-motion: no-preference) {
+  section#projets article,
+  section#projets .mat-card {
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
   }
-
-  h2 {
-    margin: 0 0 16px;
-  }
-
-  h3 {
-    margin: 0 0 16px;
+  section#projets article:hover,
+  section#projets .mat-card:hover {
+    transform: translateY(-2px);
   }
 }
-
-// Utilitaires de marges et de padding
-.m-1 { margin: 8px; }
-.m-2 { margin: 16px; }
-.m-3 { margin: 24px; }
-.p-1 { padding: 8px; }
-.p-2 { padding: 16px; }
-.p-3 { padding: 24px; }
-
-

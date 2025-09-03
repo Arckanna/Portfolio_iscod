@@ -1,0 +1,14 @@
+<div class="section section--experience">
+  <p class="section-tag">// expérience</p>
+  <h2 class="section-title">Parcours & reconversion</h2>
+
+  <ol class="timeline">
+    <li *ngFor="let i of items" class="timeline-item">
+      <div class="timeline-dates">{{ i.dates }}</div>
+      <div class="timeline-title">{{ i.titre }}</div>
+      <ul class="timeline-points">
+        <li *ngFor="let p of i.points">{{ p }}</li>
+      </ul>
+    </li>
+  </ol>
+</div>

@@ -1,34 +1,16 @@
-<div class="skills-container">
-    <div class="skills-list">
-    <div class="skill-category">
-      <h3>Langages</h3>
-      <ul>
-        <li>Java</li>
-        <li>C#</li>
-        <li>Python</li>
-        <li>JavaScript / TypeScript</li>
-      </ul>
-    </div>
+<div class="section">
+  <p class="section-tag">// compétences</p>
+  <h2 class="section-title">Ce que je sais faire</h2>
 
-    <div class="skill-category">
-      <h3>Frameworks & Bibliothèques</h3>
-      <ul>
-        <li>Angular</li>
-        <li>Spring Boot</li>
-        <li>.NET / WPF</li>
-        <li>Node.js</li>
-      </ul>
-    </div>
+  <div class="skill-cards mt-4">
+    <div class="skill-card" *ngFor="let cat of categories">
+      <h3>{{ cat.title }}</h3>
 
-    <div class="skill-category">
-      <h3>Outils & Méthodologies</h3>
-      <ul>
-        <li>Git / GitHub</li>
-        <li>CI/CD (GitHub Actions)</li>
-        <li>Méthodes agiles (Scrum)</li>
-        <li>UML / Modélisation</li>
+      <ul class="chips mt-2">
+        <li class="chip" *ngFor="let it of cat.items">{{ it }}</li>
       </ul>
+
+      <p *ngIf="cat.note" class="muted mt-3">{{ cat.note }}</p>
     </div>
   </div>
 </div>
-
