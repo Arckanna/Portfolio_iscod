@@ -2,75 +2,27 @@
   <p class="section-tag">// projets</p>
   <h2 class="section-title">Mes réalisations</h2>
 
-  <div class="grid-2 mt-4">
-    <!-- Exemple -->
-    <article>
-      <!--img src="assets/gamesup.webp" alt="GamesUP"-->
-      <div style="padding:12px 14px;">
-        <h3>ITGlobe Solutions</h3>
-        <p class="short">Application de réservation et de suivi pour une SSII fictive.</p>
-        <div class="hover-description">
-          Projet simulant les besoins d'une entreprise de services du numérique : planification, réservations, interface Angular et API Spring Boot.
-        </div>
-        <div class="links mt-2">
-          <a href="#">Demo</a>
-          <a href="#">Code</a>
-        </div>
-      </div>
-    </article>
-    <article>
-      <!--img src="assets/gamesup.webp" alt="GamesUP"-->
-      <div style="padding:12px 14px;">
-        <h3>O’Fit</h3>
-        <p class="short">Coaching sportif avec UI intuitive et suivi de progression.</p>
-        <div class="hover-description">
-          Application responsive créée en mobile-first, gestion d'utilisateurs et statistiques personnelles, développement en Angular.
-        </div>
-        <div class="links mt-2">
-          <a href="#">Demo</a>
-          <a href="#">Code</a>
-        </div>
-      </div>
-    </article>
-    <article>
-      <!--img src="assets/gamesup.webp" alt="GamesUP"-->
-      <div style="padding:12px 14px;">
-        <h3>GAMESUP</h3>
-        <p class="short">Moteur de recherche de jeux vidéo avec base de données dynamique.</p>
-        <div class="hover-description">
-          Travail sur le filtrage, la recherche multicritère et l’optimisation des réponses utilisateur avec Angular et Firebase.
-        </div>
-        <div class="links mt-2">
-          <a href="#">Demo</a>
-          <a href="#">Code</a>
-        </div>
-      </div>
-    </article>
-    <article>
-      <!--img src="assets/gamesup.webp" alt="GamesUP"-->
-      <div style="padding:12px 14px;">
-        <h3>PMT - Project Management Tool</h3>
-        <p class="short">Gestion de projet avec rôles, tâches, permissions (Angular/Spring Boot).</p>
-        <div class="hover-description">
-          Projet d’envergure avec authentification, autorisations, et workflow projet. API REST backend Spring Boot connectée à une UI Angular.
-        </div>
-        <div class="links mt-2">
-          <a href="#">Demo</a>
-          <a href="#">Code</a>
-        </div>
-      </div>
-    </article>
-    <article>
-<!--      <img src="assets/gamesup.webp" alt="GamesUP">-->
-      <div style="padding:12px 14px;">
-        <h3>Jeu Unity3D</h3>
-        <p class="short">Prototype 3D d’exploration utilisant C# et moteur Unity.</p>
-        <div class="links mt-2">
-          <a href="#">Demo</a>
-          <a href="#">Code</a>
-        </div>
-      </div>
-    </article>
+  <mat-chip-listbox aria-label="Filtres" class="chips mt-3">
+    <mat-chip-option *ngFor="let f of filters" [selected]="active===f" (click)="setFilter(f)">{{ f }}</mat-chip-option>
+  </mat-chip-listbox>
 
+  <div class="grid-2 mt-4">
+    <mat-card *ngFor="let p of filtered" class="project-card">
+      <img mat-card-image *ngIf="p.img || p.imgs?.length" [src]="p.img ?? p.imgs![0]" [alt]="p.title" />
+
+      <mat-card-header>
+        <mat-card-title>{{ p.title }}</mat-card-title>
+        <mat-card-subtitle>{{ p.role }} — {{ p.stack.join(' · ') }}</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <p class="short">{{ p.descShort }}</p>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-stroked-button (click)="openDialog('demo', p)">Demo</button>
+        <button mat-stroked-button (click)="openDialog('code', p)">Code</button>
+      </mat-card-actions>
+    </mat-card>
   </div>
 </div>

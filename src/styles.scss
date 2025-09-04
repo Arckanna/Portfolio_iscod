@@ -145,3 +145,35 @@ section#projets article img { width:100%; display:block; aspect-ratio: 16/9; obj
     transform: translateY(-2px);
   }
 }
+/* Améliore le rendu Material dans le thème sombre */
+section#projets .mat-mdc-card,
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: none;
+}
+section#projets .mat-mdc-card:hover,
+.project-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+}
+
+.short { color: var(--muted); margin-top: 8px; }
+.project-card .hover-description { display: none; color: var(--muted); margin-top: 6px; }
+.project-card:hover .hover-description { display: block; }
+
+/* Mat chips : un peu d’air */
+.mdc-evolution-chip { --mdc-chip-container-height: 34px; }
+@import '@angular/cdk/overlay-prebuilt.css';
+
+/* S'assurer que la popup passe AU-DESSUS de la navbar (qui est en z-index:1000) */
+.cdk-overlay-container { z-index: 2000 !important; }
+
+/* Option esthétique : style du panneau de dialog */
+.project-dialog-panel .mat-mdc-dialog-container .mdc-dialog__surface {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}

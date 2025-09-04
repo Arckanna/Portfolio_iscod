@@ -5,6 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
 import { HttpClientModule } from '@angular/common/http';
 
+import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
@@ -14,6 +20,7 @@ import { ContactComponent } from './components/contact/contact.component'
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { ScrollRevealDirective } from './shared/scroll-reveal.directive';
 import {ExperienceComponent} from "./components/experience/experience.component";
+import { ProjectDialogComponent } from './components/project-dialog/project-dialog.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +32,19 @@ import {ExperienceComponent} from "./components/experience/experience.component"
     ContactComponent,
     ExperienceComponent,
     LandingPageComponent,
-    ScrollRevealDirective
+    ScrollRevealDirective,
+    ProjectDialogComponent,
+
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule, MatChipsModule, MatButtonModule,
+    MatDialogModule, MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

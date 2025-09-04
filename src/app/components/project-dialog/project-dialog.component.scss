@@ -1,0 +1,37 @@
+.dialog { max-width: 880px; width: 90vw; }
+.dialog__header { display:flex; align-items:center; gap:12px; justify-content:space-between; margin-bottom:12px; }
+.dialog__header h3 { margin:0; }
+.subtitle { color: var(--muted); font-size: 13px; }
+.tabs { display:flex; gap:8px; }
+
+.carousel {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.carousel img {
+  position: relative;   /* crée un contexte de stacking */
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+  background: #0e141b;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;              /* ← clé ! au-dessus de l'image */
+  pointer-events: auto;    /* ← s'assurer que le clic est pris */
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+}
+.nav.prev { left:6px; }
+.nav.next { right:6px; }
+
+.desc { color: var(--muted); margin: 12px 0 8px; }
+.ext { display:flex; gap:10px; margin-top: 6px; }
