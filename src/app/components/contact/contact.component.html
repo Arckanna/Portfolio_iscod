@@ -2,9 +2,26 @@
   <p class="section-tag">// contact</p>
   <h2 class="section-title">Travaillons ensemble</h2>
   <p class="mt-2" style="color:var(--muted)">Disponible pour opportunités et échanges techniques.</p>
+
+  <p class="mt-2" style="color:var(--muted)">
+    Vous pouvez m’écrire via ce formulaire ou par email.
+  </p>
+
+  <div class="tf-inline mt-3">
+    <iframe
+      [src]="TYPEFORM_URL | safeUrl"
+      title="Formulaire de contact"
+      loading="lazy">
+    </iframe>
+  </div>
+
   <div class="buttons mt-3">
-    <a href="mailto:valerie.lecoeur@example.com">Email</a>
-    <a href="https://github.com/Arckanna" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/valerie-lecoeur" target="_blank">LinkedIn</a>
+    <a mat-stroked-button href="mailto:valerie.lecoeur@example.com">Email</a>
+    <a mat-stroked-button target="_blank" href="https://www.linkedin.com/in/valerie-lecoeur">LinkedIn</a>
+    <a mat-stroked-button target="_blank" href="https://github.com/Arckanna">GitHub</a>
+  </div>
+
+  <div class="powered">
+    powered by <a href="https://admin.typeform.com/signup" target="_blank" rel="noopener">Typeform</a>
   </div>
 </div>
