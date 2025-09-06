@@ -21,6 +21,8 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { ScrollRevealDirective } from './shared/scroll-reveal.directive';
 import {ExperienceComponent} from "./components/experience/experience.component";
 import { ProjectDialogComponent } from './components/project-dialog/project-dialog.component';
+import {ContactDialogComponent} from "./components/contact-dialog/contact-dialog.component";
+import {SafeUrlPipe} from "./pipes/safe-url.pipe";
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { ProjectDialogComponent } from './components/project-dialog/project-dial
     LandingPageComponent,
     ScrollRevealDirective,
     ProjectDialogComponent,
+    ContactDialogComponent,
+    SafeUrlPipe
 
   ],
   imports: [
