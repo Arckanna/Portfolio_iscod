@@ -25,4 +25,9 @@ import {
     ])
   ]
 })
-export class HomeComponent {}
+export class HomeComponent {
+  go(selector: string) {
+    const el = document.querySelector(selector);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
