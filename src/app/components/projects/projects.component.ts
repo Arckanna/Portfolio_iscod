@@ -22,10 +22,36 @@ type Project = {
 export class ProjectsComponent {
   constructor(private dialog: MatDialog) {}
 
-  filters = ['Tous', 'Angular', 'Spring', 'Unity', 'Étude de cas'];
+  filters = ['Tous', 'Angular', 'Spring', 'Unity', 'Robotique','Étude de cas'];
   active = 'Tous';
 
   projects: Project[] = [
+    {
+      title: 'Space Invaders (Unity3D)',
+      role: 'Gameplay',
+      stack: ['Unity', 'C#'],
+      tags: ['Unity'],
+      imgs: [
+        'assets/projects/spaceinvaders/1.webp',
+        //'assets/projects/spaceinvaders/2.webp'
+      ],
+      demo: 'https://arckanna.github.io/Cvsite/spaceInvaders/index.html',
+      descShort: 'Remake du classique Space Invaders en C# avec Unity.',
+      descLong:  'Boucle de jeu arcade, gestion des vagues, collisions, score et UI minimaliste. Focus sur le gameplay et la lisibilité du code.'
+    },
+    {
+      title: 'Abrarobotix (bras robotique 3D + Arduino)',
+      role: 'Maker / Contrôle',
+      stack: ['Arduino', 'Impression 3D'],
+      tags: ['Robotique'],
+      imgs: [
+        'assets/projects/abrarobotix/1.webp',
+        //'assets/projects/abrarobotix/2.webp'
+      ],
+      demo: 'https://codepen.io/Arckamna/full/NJrVQY',
+      descShort: 'Bras robotique imprimé en 3D, piloté par Arduino.',
+      descLong:  'Conception, impression 3D, assemblage et contrôle de 4 servo-moteurs (rotation, vertical/horizontal, pince). Programmation Arduino (C++).'
+    },
     {
       title: 'ITGlobe Solutions',
       role: 'Full-stack',
