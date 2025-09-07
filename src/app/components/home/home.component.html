@@ -1,26 +1,24 @@
-<div class="home-container">
+<div class="hero">
+  <div class="hero__inner">
+    <p class="section-tag">// Accueil</p>
+    <h1 class="hero__title">Valérie Lecœur</h1>
+    <p class="hero__subtitle">Experte en Ingénierie du Logiciel— Angular • Spring • C#/.NET</p>
 
+    <p class="hero__cta">
+      <a class="btn btn-fill" (click)="go('#contact')">Engagez-moi</a>
+      <a class="btn btn-border" (click)="go('#projets')">Projets</a>
+      <!-- option : CV -->
+      <!-- <a class="btn btn-ghost" href="assets/CV_Valerie_Lecoeur.pdf" download>Télécharger mon CV</a> -->
+    </p>
 
-  <!-- Bloc haut avec image et présentation brève -->
-  <div class="presentation-block" @staggerFadeInUp>
-    <div class="photo fade-item" >
-      <img src="assets/images/profile.webp" alt="Photo de profil" />
-    </div>
-
-    <div class="intro" >
-      <h1 class="fade-item">Valérie Lecoeur</h1>
-      <p class="subtitle fade-item">Experte en Ingénierie du Logiciel</p>
-      <p class="description fade-item">
-          Experte en ingénierie logicielle avec une spécialisation en
-          développement full-stack et architecture logicielle. Passionnée par les
-          nouvelles technologies et l'innovation dans le développement logiciel.
-      </p>
-      <p class="cta">
-        <a href="#projets">Voir mes projets</a>
-        <a href="#contact">Me contacter</a>
-        <a href="assets/CV_Valerie_Lecoeur.pdf" download>Télécharger mon CV</a>
-      </p>
-
-    </div>
+    <ul class="hero__badges">
+      <li>Angular</li>
+      <li>Spring Boot</li>
+      <li>C# / WPF</li>
+      <li>CI/CD</li>
+    </ul>
   </div>
+
+  <!-- zone visuelle à droite (facultative) -->
+  <!-- <div class="hero__visual"></div> -->
 </div>
