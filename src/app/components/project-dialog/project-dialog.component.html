@@ -4,41 +4,45 @@
 </h2>
 
 <mat-dialog-content>
-
   <div class="tabs" style="margin: 8px 0 12px; display:flex; gap:8px;">
     <button mat-stroked-button [color]="mode==='demo' ? 'primary' : undefined" type="button" (click)="setMode('demo')">Demo</button>
     <button mat-stroked-button [color]="mode==='code' ? 'primary' : undefined" type="button" (click)="setMode('code')">Code</button>
   </div>
 
-  <section *ngIf="mode==='demo'">
-    <div class="carousel" role="region" aria-label="Aperçu du projet">
+  <!-- Bloc description, selon le mode -->
+  <ng-container *ngIf="mode==='demo'; else codeTpl">
+    <div class="carousel" role="region" aria-label="Aperçu du projet" style="position:relative;">
       <img [src]="images[idx]" [alt]="p.title + ' capture ' + (idx+1)" />
-      <button mat-icon-button class="nav prev" type="button" aria-label="Image précédente" (click)="prev()">
+      <button *ngIf="images.length>1" mat-icon-button class="nav prev" type="button" aria-label="Image précédente" (click)="prev()">
         <mat-icon>chevron_left</mat-icon>
       </button>
-      <button mat-icon-button class="nav next" type="button" aria-label="Image suivante" (click)="next()">
+      <button *ngIf="images.length>1" mat-icon-button class="nav next" type="button" aria-label="Image suivante" (click)="next()">
         <mat-icon>chevron_right</mat-icon>
       </button>
     </div>
 
-
     <p class="desc" *ngIf="p.descLong; else short">{{ p.descLong }}</p>
     <ng-template #short><p class="desc">{{ p.descShort }}</p></ng-template>
 
-    <div class="ext" *ngIf="p.demo" style="display:flex; gap:10px; margin-top: 6px;">
+    <div class="ext" *ngIf="p.demo">
       <a mat-stroked-button color="primary" [href]="p.demo" target="_blank" rel="noopener">Ouvrir la démo</a>
     </div>
-  </section>
+  </ng-container>
 
-  <section *ngIf="mode==='code'">
+  <ng-template #codeTpl>
     <p class="desc">{{ p.descShort || p.descLong }}</p>
-    <div class="ext" style="display:flex; gap:10px; margin-top: 6px;">
+    <div class="ext">
       <a *ngIf="p.code" mat-stroked-button color="primary" [href]="p.code" target="_blank" rel="noopener">Voir le repo GitHub</a>
       <a *ngIf="p.demo" mat-stroked-button [href]="p.demo" target="_blank" rel="noopener">Ouvrir la démo</a>
     </div>
-  </section>
+  </ng-template>
 
+  <!-- ✅ Highlights visibles dans les deux modes -->
+  <ul *ngIf="(p.highlights?.length || 0) > 0" class="list">
+    <li *ngFor="let h of p.highlights">{{ h }}</li>
+  </ul>
 </mat-dialog-content>
+
 
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close type="button">Fermer</button>

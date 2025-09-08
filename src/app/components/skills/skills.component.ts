@@ -10,7 +10,7 @@ export class SkillsComponent {
   categories: SkillCategory[] = [
     {
       title: 'Langages',
-      items: ['Java', 'C#', 'Python', 'JavaScript', 'TypeScript']
+      items: ['Java', 'C#', 'Python', 'JavaScript', 'TypeScript', 'Kotlin']
     },
     {
       title: 'Frameworks & Bibliothèques',
@@ -32,6 +32,17 @@ export class SkillsComponent {
     {
       title: 'Architecture & Méthodologies',
       items: ['UML / Modélisation', 'Design Patterns', 'Clean Architecture', 'REST API', 'Agile (Scrum/Kanban)']
-    }
+    },
+    {
+      title: 'Mobile & Android',
+      items: [
+        'Android Studio / Gradle (KTS)',
+        'Views (Activity + XML), WindowInsets (edge-to-edge)',
+        'Kotlin (Coroutines / Flow)',
+        'Open-Meteo (forecast & geocoding), JSON (org.json)',
+        'SharedPreferences (persistance)',
+        'R8/ProGuard, App Bundle (.aab), Play Console (tests)'
+      ]
+    },
   ];
 }
