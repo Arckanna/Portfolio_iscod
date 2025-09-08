@@ -12,6 +12,7 @@ type Project = {
   code?: string;              // lien GitHub éventuel
   descShort?: string;
   descLong?: string;
+  highlights?: string[];
 };
 
 type DialogData = { project: Project; mode: 'demo'|'code' };

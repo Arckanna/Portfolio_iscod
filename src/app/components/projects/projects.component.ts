@@ -13,6 +13,7 @@ type Project = {
   code?: string;
   descShort?: string;
   descLong?: string;
+  highlights?: string[];
 };
 
 @Component({
@@ -22,10 +23,36 @@ type Project = {
 export class ProjectsComponent {
   constructor(private dialog: MatDialog) {}
 
-  filters = ['Tous', 'Angular', 'Spring', 'Unity', 'Robotique','Étude de cas'];
+  filters = ['Tous', 'Angular', 'Spring', 'Unity', 'Android', 'Robotique', 'Étude de cas'];
   active = 'Tous';
 
   projects: Project[] = [
+    {
+      title: 'Météo & Citation (Android)',
+      role: 'Mobile',
+      stack: ['Kotlin', 'Android', 'Views XML', 'Coroutines'],
+      tags: ['Android'], // ← doit matcher le filtre
+      imgs: [
+        'assets/projects/meteo/1.webp',
+        'assets/projects/meteo/2.webp',
+        'assets/projects/meteo/3.webp'
+      ],
+      // demo: 'https://…',    // (lien Play Store / vidéo / APK si tu veux)
+      // code: 'https://…',    // (repo si public)
+      descShort:
+        'App météo (actuelle • 24h • 7j) + citation liée au temps, recherche & favoris, thème dynamique.',
+      descLong:
+        'Kotlin + Coroutines, Views XML, Open-Meteo (forecast & geocoding), SharedPreferences. ' +
+        'Build Gradle Kotlin DSL, R8/ProGuard (shrink/resources). Publication via Play Console (tests internes/fermés).',
+      highlights: [
+        'Prévisions : actuelle, 24h (heure par heure), 7 jours',
+        'Recherche de villes (geocoding) + favoris persistants',
+        'Thème dynamique (crossfade) selon code météo WMO',
+        'Citations contextuelles + bouton “Nouvelle citation”',
+        'Bouton “Envoyer un retour” (mailto) pré-rempli',
+        'Optimisation taille (R8 + shrink resources), mapping R8 importé'
+      ]
+    },
     {
       title: 'Space Invaders (Unity3D)',
       role: 'Gameplay',
@@ -37,7 +64,13 @@ export class ProjectsComponent {
       ],
       demo: 'https://arckanna.github.io/Cvsite/spaceInvaders/index.html',
       descShort: 'Remake du classique Space Invaders en C# avec Unity.',
-      descLong:  'Boucle de jeu arcade, gestion des vagues, collisions, score et UI minimaliste. Focus sur le gameplay et la lisibilité du code.'
+      descLong:  'Boucle de jeu arcade, gestion des vagues, collisions, score et UI minimaliste. Focus sur le gameplay et la lisibilité du code.',
+      highlights: [
+        'Gestion des tirs & collisions (joueur / aliens / projectiles)',
+        'Vie, Game Over & restart rapide',
+        'Scripts C# modulaires (GameManager, Spawner, EnemyController)',
+        'Build WebGL déployé sur GitHub Pages'
+      ]
     },
     {
       title: 'Abrarobotix (bras robotique 3D + Arduino)',
@@ -50,7 +83,13 @@ export class ProjectsComponent {
       ],
       demo: 'https://codepen.io/Arckamna/full/NJrVQY',
       descShort: 'Bras robotique imprimé en 3D, piloté par Arduino.',
-      descLong:  'Conception, impression 3D, assemblage et contrôle de 4 servo-moteurs (rotation, vertical/horizontal, pince). Programmation Arduino (C++).'
+      descLong:  'Conception, impression 3D, assemblage et contrôle de 4 servo-moteurs (rotation, vertical/horizontal, pince). Programmation Arduino (C++).',
+      highlights: [
+        'Conception & impression 3D des pièces (bras + pince)',
+        '4 servomoteurs : rotation, vertical, horizontal, pince',
+        'Pilotage Arduino (C++) — mapping angles → PWM',
+        'Calibration des limites mécaniques & vitesses adoucies'
+      ]
     },
     {
       title: 'ITGlobe Solutions',
