@@ -25,64 +25,17 @@
 </div>
 
 <!-- COMPÉTENCES -->
-<div class="section">
+<div class="section" id="competences">
   <p class="section-tag">// Compétences</p>
   <h2 class="section-title">Ce que je sais faire</h2>
 
   <div class="skill-cards mt-4">
-    <div class="skill-card">
-      <h3>Langages</h3>
+    <div class="skill-card" *ngFor="let g of categories; trackBy: trackByTitle">
+      <h3>{{ g.title }}</h3>
       <ul class="chips mt-2">
-        <li class="chip">Java</li>
-        <li class="chip">C#</li>
-        <li class="chip">Python</li>
-        <li class="chip">JavaScript</li>
-        <li class="chip">TypeScript</li>
+        <li class="chip" *ngFor="let it of g.items">{{ it }}</li>
       </ul>
-    </div>
-
-    <div class="skill-card">
-      <h3>Frameworks & Bibliothèques</h3>
-      <ul class="chips mt-2">
-        <li class="chip">Angular</li>
-        <li class="chip">Spring Boot</li>
-        <li class="chip">.NET / WPF</li>
-        <li class="chip">Node.js</li>
-      </ul>
-    </div>
-
-    <div class="skill-card">
-      <h3>DevOps & CI/CD</h3>
-      <ul class="chips mt-2">
-        <li class="chip">Git / GitHub</li>
-        <li class="chip">GitHub Actions</li>
-        <li class="chip">Docker (bases)</li>
-        <li class="chip">NGINX (reverse proxy)</li>
-        <li class="chip">GitFlow / PR</li>
-      </ul>
-    </div>
-
-    <div class="skill-card">
-      <h3>Qualité, Sécurité & Tests</h3>
-      <ul class="chips mt-2">
-        <li class="chip">Tests unitaires (JUnit, MSTest/NUnit, Jest)</li>
-        <li class="chip">E2E (Cypress)</li>
-        <li class="chip">Lint/Format (ESLint, Prettier)</li>
-        <li class="chip">Auth JWT/OAuth2</li>
-        <li class="chip">Bonnes pratiques OWASP</li>
-      </ul>
-      <p class="muted mt-3">Pipelines CI (build, tests) & hygiène sécurité Web.</p>
-    </div>
-
-    <div class="skill-card">
-      <h3>Architecture & Méthodologies</h3>
-      <ul class="chips mt-2">
-        <li class="chip">UML / Modélisation</li>
-        <li class="chip">Design Patterns</li>
-        <li class="chip">Clean Architecture</li>
-        <li class="chip">REST API</li>
-        <li class="chip">Agile (Scrum/Kanban)</li>
-      </ul>
+      <p class="muted mt-3" *ngIf="g.note">{{ g.note }}</p>
     </div>
   </div>
 </div>
