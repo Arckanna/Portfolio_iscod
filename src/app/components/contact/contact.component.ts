@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
   TYPEFORM_URL =
-    'https://arckanna.typeform.com/to/GZflCn?typeform-medium=embed&hide_headers=true&hide_footer=true';
+    'https://arckanna.typeform.com/to/GZflCn?typeform-medium=embed&hide_headers=true&hide_footer=true&disable-auto-focus=true';
 }
 
