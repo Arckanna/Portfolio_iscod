@@ -81,7 +81,7 @@ export class ProjectsComponent {
         'assets/projects/abrarobotix/1.webp',
         //'assets/projects/abrarobotix/2.webp'
       ],
-      demo: 'https://codepen.io/Arckamna/full/NJrVQY',
+      // demo: 'https://…',
       descShort: 'Bras robotique imprimé en 3D, piloté par Arduino.',
       descLong:  'Conception, impression 3D, assemblage et contrôle de 4 servo-moteurs (rotation, vertical/horizontal, pince). Programmation Arduino (C++).',
       highlights: [
@@ -117,7 +117,9 @@ export class ProjectsComponent {
       role: 'Frontend',
       stack: ['Angular'],
       tags: ['Angular', 'Étude de cas'],
-      imgs: ['assets/projects/itglobe/1.webp','assets/projects/itglobe/2.webp'],
+      imgs: ['assets/projects/GameSup/1.webp','assets/projects/GameSup/2.webp',
+        'assets/projects/GameSup/6.webp','assets/projects/GameSup/3.webp',
+        'assets/projects/GameSup/4.webp','assets/projects/GameSup/5.webp'],
       // demo: 'https://…',
       descShort: 'Moteur de recherche de jeux vidéo.',
       descLong:  'Filtrage, recherche multicritère, optimisations Angular.'
