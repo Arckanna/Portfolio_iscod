@@ -113,16 +113,34 @@ export class ProjectsComponent {
       descLong:  'Responsive mobile-first, stats perso, Angular.'
     },
     {
-      title: 'GAMESUP',
+      title: 'GamesUP',
       role: 'Frontend',
-      stack: ['Angular'],
-      tags: ['Angular', 'Étude de cas'],
-      imgs: ['assets/projects/GameSup/1.webp','assets/projects/GameSup/2.webp',
+      stack: ['Angular', 'RxJS', 'TypeScript', 'HTML/CSS'],
+      tags: ['E-commerce', 'Recherche', 'Filtrage', 'Performance', 'Étude de cas'],
+      imgs: [
+        'assets/projects/GameSup/1.webp','assets/projects/GameSup/2.webp',
         'assets/projects/GameSup/6.webp','assets/projects/GameSup/3.webp',
-        'assets/projects/GameSup/4.webp','assets/projects/GameSup/5.webp'],
+        'assets/projects/GameSup/4.webp','assets/projects/GameSup/5.webp'
+      ],
       // demo: 'https://…',
-      descShort: 'Moteur de recherche de jeux vidéo.',
-      descLong:  'Filtrage, recherche multicritère, optimisations Angular.'
+      descShort: 'Catalogue e-commerce de jeux de société avec recherche instantanée, tri et filtres.',
+      descLong:
+        'Étude de cas Front Angular : catalogue + fiche produit, recherche multicritère (catégorie, éditeur, prix), tri/pagination, favoris, et optimisations de performance (OnPush/trackBy, lazy loading).',
+
+      // facultatif si tu veux l’afficher quelque part :
+      //problemSolutionImpact: {
+      //  problem: 'Bugs et lenteurs sur la recherche entraînant des paniers perdus.',
+       // solution: 'Refonte du front Angular : filtres réactifs (RxJS), debounce, pagination côté API, et stratégie OnPush.',
+      //  impact: 'Interface plus fluide, temps de rendu réduit et parcours d’achat clarifié.'
+     // },
+
+      highlights: [
+        'Filtres combinables en temps réel (catégorie, éditeur, prix, note).',
+        'Tri & pagination avec état d’URL partageable.',
+        'Virtual scroll / trackBy pour listes volumineuses.',
+        'Services typés + interceptors (gestion erreurs/chargement).',
+        'Tests unitaires clés (pipes, services) et accessibilité de base (ARIA).'
+      ]
     },
     {
       title: 'PMT — Project Management Tool',
