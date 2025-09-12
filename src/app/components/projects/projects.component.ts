@@ -107,7 +107,7 @@ export class ProjectsComponent {
       role: 'Frontend',
       stack: ['Angular'],
       tags: ['Angular'],
-      imgs: [ 'https://picsum.photos/seed/itglobe1/1200/675',
+      imgs: [ 'assets/projects/ofit/1.webp',
         'https://picsum.photos/seed/itglobe2/1200/675'],
       // demo: 'https://…',
       descShort: 'Coaching sportif, UI intuitive & suivi de progression.',
@@ -128,7 +128,7 @@ export class ProjectsComponent {
       descLong:
         'Étude de cas Front Angular : catalogue + fiche produit, recherche multicritère (catégorie, éditeur, prix), tri/pagination, favoris, et optimisations de performance (OnPush/trackBy, lazy loading).',
 
-      // facultatif si tu veux l’afficher quelque part :
+
       //problemSolutionImpact: {
       //  problem: 'Bugs et lenteurs sur la recherche entraînant des paniers perdus.',
        // solution: 'Refonte du front Angular : filtres réactifs (RxJS), debounce, pagination côté API, et stratégie OnPush.',
@@ -148,7 +148,7 @@ export class ProjectsComponent {
       role: 'Full-stack',
       stack: ['Angular', 'Spring'],
       tags: ['Angular', 'Spring', 'Étude de cas'],
-      imgs: ['assets/projects/itglobe/1.webp','assets/projects/itglobe/2.webp'],
+      imgs: ['assets/projects/PMT/1.webp','assets/projects/itglobe/2.webp'],
       // demo: 'https://…',
       descShort: 'Gestion de projet avec rôles, tâches, permissions.',
       descLong:  'Auth, autorisations, API REST Spring Boot + UI Angular.'
