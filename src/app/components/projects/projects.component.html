@@ -8,7 +8,13 @@
 
   <div class="grid-2 mt-4">
     <mat-card *ngFor="let p of filtered" class="project-card">
-      <img mat-card-image *ngIf="p.img || p.imgs?.length" [src]="p.img ?? p.imgs![0]" [alt]="p.title" />
+      <div class="project-thumb">
+        <img *ngIf="p.img || p.imgs?.length"
+             [src]="p.img ?? p.imgs![0]"
+             [alt]="p.title"
+             width="1280" height="1500"
+             loading="lazy" decoding="async">
+      </div>
 
       <mat-card-header>
         <mat-card-title>{{ p.title }}</mat-card-title>
