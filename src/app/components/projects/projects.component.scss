@@ -18,4 +18,48 @@
   }
 }
 
+/* Grille : les items s'étirent en hauteur */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* Carte projet en colonne, actions poussées en bas */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;                 /* ← s’étire pour occuper toute la ligne */
+
+  mat-card-header { margin-bottom: 8px; }
+
+  mat-card-content {
+    flex: 1 1 auto;             /* ← prend l’espace disponible */
+    display: flex;
+    flex-direction: column;
+  }
+
+  mat-card-actions {
+    margin-top: auto;            /* ← pousse les boutons en bas */
+    padding-top: 8px;
+  }
+
+  /* optionnel : évite l’espace inutile avant les actions */
+  .short { margin-bottom: 0; }
+}
+
 .grid-2 { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 1rem; }
+//.project-card { min-height: clamp(420px, 38vw, 520px); }
+.project-card { min-height: clamp(270px, 23vw, 420px);  /* ← plus bas qu'avant */
+}
+@media (max-width: 600px) {
+  .project-card { min-height: unset; }    /* sur mobile, on laisse respirer */
+}
+.short {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;         /* ~3 lignes max */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 0;
+}
