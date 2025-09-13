@@ -36,7 +36,9 @@ export class ProjectsComponent {
       imgs: [
         'assets/projects/meteo/1.webp',
         'assets/projects/meteo/2.webp',
-        'assets/projects/meteo/3.webp'
+        'assets/projects/meteo/3.webp',
+        'assets/projects/meteo/4.webp',
+        'assets/projects/meteo/5.webp',
       ],
       // demo: 'https://…',    // (lien Play Store / vidéo / APK si tu veux)
       // code: 'https://…',    // (repo si public)
