@@ -47,6 +47,30 @@
 
 .list { margin: 8px 0 0; padding-left: 18px; color: var(--muted); }
 .list li { margin: 4px 0; }
+/* Couleurs par défaut lisibles dans le dialog */
+:host {
+  --dlg-text: #fff;
+  --dlg-outline: rgba(255,255,255,0.28);
+  --dlg-primary: var(--primary, #6750A4);
+  --dlg-on-primary: #fff;
+}
+
+/* Boutons stroked de l’onglet et des liens externes */
+.tabs .mat-mdc-outlined-button,
+.ext  .mat-mdc-outlined-button {
+  /* Label + contour lisibles sur fond sombre */
+  --mdc-outlined-button-label-text-color: var(--dlg-text);
+  --mdc-outlined-button-outline-color: var(--dlg-outline);
+  color: var(--dlg-text);
+  border-color: var(--dlg-outline);
+}
+
+/* État sélectionné de l’onglet (si tu ajoutes la classe .is-active en HTML) */
+.tabs .mat-mdc-outlined-button.is-active {
+  background: var(--dlg-primary);
+  color: var(--dlg-on-primary);
+  border-color: transparent;
+}
 
 @media (max-width: 480px) {
   .carousel { max-height: 60vh; }

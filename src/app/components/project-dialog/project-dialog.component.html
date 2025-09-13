@@ -5,8 +5,13 @@
 
 <mat-dialog-content>
   <div class="tabs" style="margin: 8px 0 12px; display:flex; gap:8px;">
-    <button mat-stroked-button [color]="mode==='demo' ? 'primary' : undefined" type="button" (click)="setMode('demo')">Demo</button>
-    <button mat-stroked-button [color]="mode==='code' ? 'primary' : undefined" type="button" (click)="setMode('code')">Code</button>
+    <button mat-stroked-button color="primary"
+            [class.is-active]="mode==='demo'"
+            type="button" (click)="setMode('demo')">Presentation</button>
+
+    <button mat-stroked-button color="primary"
+            [class.is-active]="mode==='code'"
+            type="button" (click)="setMode('code')">Résumé</button>
   </div>
 
   <!-- Bloc description, selon le mode -->
