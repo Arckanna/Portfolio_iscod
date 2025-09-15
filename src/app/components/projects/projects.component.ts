@@ -63,7 +63,9 @@ export class ProjectsComponent {
       tags: ['Unity'],
       imgs: [
         'assets/projects/spaceinvaders/1.webp',
-        //'assets/projects/spaceinvaders/2.webp'
+        'assets/projects/spaceinvaders/2.webp',
+        'assets/projects/spaceinvaders/3.webp',
+        'assets/projects/spaceinvaders/4.webp'
       ],
       demo: 'https://arckanna.github.io/Cvsite/spaceInvaders/index.html',
       descShort: 'Remake du classique Space Invaders en C# avec Unity.',
