@@ -1,5 +1,6 @@
 import { Component, Inject, HostListener } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import {ProblemSolutionImpact} from "../projects/projects.component";
 
 type Project = {
   title: string;
@@ -13,6 +14,7 @@ type Project = {
   descShort?: string;
   descLong?: string;
   highlights?: string[];
+  problemSolutionImpact?:ProblemSolutionImpact;
 };
 
 type DialogData = { project: Project; mode: 'demo'|'code' };

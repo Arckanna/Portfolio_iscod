@@ -29,6 +29,12 @@
     <p class="desc" *ngIf="p.descLong; else short">{{ p.descLong }}</p>
     <ng-template #short><p class="desc">{{ p.descShort }}</p></ng-template>
 
+    <div class="psi-block" *ngIf="p.problemSolutionImpact">
+      <p><strong>Problème :</strong> {{ p.problemSolutionImpact.problem }}</p>
+      <p><strong>Solution :</strong> {{ p.problemSolutionImpact.solution }}</p>
+      <p><strong>Impact :</strong> {{ p.problemSolutionImpact.impact }}</p>
+    </div>
+
     <div class="ext" *ngIf="p.demo">
       <a mat-stroked-button color="primary" [href]="p.demo" target="_blank" rel="noopener">Ouvrir la démo</a>
     </div>
