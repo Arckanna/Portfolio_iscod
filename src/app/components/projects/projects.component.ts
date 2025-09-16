@@ -2,6 +2,12 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ProjectDialogComponent } from '../project-dialog/project-dialog.component';
 
+export interface ProblemSolutionImpact {
+  problem: string;
+  solution: string;
+  impact: string;
+}
+
 type Project = {
   title: string;
   role: string;
@@ -14,6 +20,7 @@ type Project = {
   descShort?: string;
   descLong?: string;
   highlights?: string[];
+  problemSolutionImpact?: ProblemSolutionImpact;
 };
 
 @Component({
@@ -133,11 +140,11 @@ export class ProjectsComponent {
         'Étude de cas Front Angular : catalogue + fiche produit, recherche multicritère (catégorie, éditeur, prix), tri/pagination, favoris, et optimisations de performance (OnPush/trackBy, lazy loading).',
 
 
-      //problemSolutionImpact: {
-      //  problem: 'Bugs et lenteurs sur la recherche entraînant des paniers perdus.',
-       // solution: 'Refonte du front Angular : filtres réactifs (RxJS), debounce, pagination côté API, et stratégie OnPush.',
-      //  impact: 'Interface plus fluide, temps de rendu réduit et parcours d’achat clarifié.'
-     // },
+      problemSolutionImpact: {
+        problem: 'Bugs et lenteurs sur la recherche entraînant des paniers perdus.',
+        solution: 'Refonte du front Angular : filtres réactifs (RxJS), debounce, pagination côté API, et stratégie OnPush.',
+        impact: 'Interface plus fluide, temps de rendu réduit et parcours d’achat clarifié.'
+      },
 
       highlights: [
         'Filtres combinables en temps réel (catégorie, éditeur, prix, note).',

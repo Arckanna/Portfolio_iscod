@@ -75,3 +75,15 @@
 @media (max-width: 480px) {
   .carousel { max-height: 60vh; }
 }
+.psi-block {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--primary-color, #3f51b5);
+  background: #f8f9fa;
+  border-radius: 6px;
+
+  p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+  }
+}
