@@ -31,10 +31,35 @@ type Project = {
 export class ProjectsComponent {
   constructor(private dialog: MatDialog) {}
 
-  filters = ['Tous', 'Angular', 'Spring', 'Unity', 'Android', 'Robotique', 'Étude de cas'];
+  filters = ['Tous', 'Angular', 'Unity', 'Android', 'Robotique', 'C#/.NET'];
   active = 'Tous';
 
   projects: Project[] = [
+    {
+      title: 'Moduleo (Kipaware) — App métier WPF',
+      role: 'C#/.NET — WPF (MVVM)',
+      stack: ['C#', '.NET', 'WPF', 'MVVM'],
+      tags: ['C#/.NET'], // ← doit matcher le filtre
+      imgs: [
+        'assets/projects/moduleo/1.webp',
+        'assets/projects/moduleo/2.webp'
+      ],
+
+      descShort:
+        'UI existante à optimiser et logique couplée. Refonte WPF MVVM et polish UX pour un flux plus fluides et une maintenance facilitée.',
+
+      descLong:
+        'Interventions sur l’app WPF : modernisation XAML, découplage MVVM, petites features (navigation, listes, validations), corrections de bugs et améliorations de réactivité. Qualité via PR Git, conventions & build CI (GitHub Actions).',
+
+      highlights: [
+        'Refonte d’écrans WPF (XAML), styles & templates',
+        'Alignement MVVM (ViewModel/Command), moins de logique code-behind',
+        'Petites features : filtres, validations, navigations',
+        'Réactivité UI : virtualisation des listes, micro-optimisations',
+        'Accessibilité : libellés, focus, tab order',
+        'Qualité : PR/reviews, analyzers, build CI GitHub Actions'
+      ]
+    },
     {
       title: 'Météo & Citation (Android)',
       role: 'Mobile',
@@ -50,17 +75,17 @@ export class ProjectsComponent {
       // demo: 'https://…',    // (lien Play Store / vidéo / APK si tu veux)
       // code: 'https://…',    // (repo si public)
       descShort:
-        'App météo (actuelle • 24h • 7j) + citation liée au temps, recherche & favoris, thème dynamique.',
+        'App météo (actuelle • 24h • 7j) + citation liée au temps, recherche et favoris, thème dynamique.',
       descLong:
-        'Kotlin + Coroutines, Views XML, Open-Meteo (forecast & geocoding), SharedPreferences. ' +
+        'Kotlin , Coroutines, Views XML, Open-Meteo (forecast et geocoding), SharedPreferences. ' +
         'Build Gradle Kotlin DSL, R8/ProGuard (shrink/resources). Publication via Play Console (tests internes/fermés).',
       highlights: [
         'Prévisions : actuelle, 24h (heure par heure), 7 jours',
-        'Recherche de villes (geocoding) + favoris persistants',
+        'Recherche de villes (geocoding) , favoris persistants',
         'Thème dynamique (crossfade) selon code météo WMO',
-        'Citations contextuelles + bouton “Nouvelle citation”',
+        'Citations contextuelles , bouton “Nouvelle citation”',
         'Bouton “Envoyer un retour” (mailto) pré-rempli',
-        'Optimisation taille (R8 + shrink resources), mapping R8 importé'
+        'Optimisation taille (R8 , shrink resources), mapping R8 importé'
       ]
     },
     {
@@ -104,10 +129,18 @@ export class ProjectsComponent {
       ]
     },
     {
+      title: 'Jeu Unity3D',
+      role: 'Gameplay',
+      stack: ['Unity', 'C#'],
+      tags: ['Unity'],
+      // img: 'assets/unity.webp',
+      descShort: 'Prototype 3D d’exploration (C# , Unity).'
+    },
+    {
       title: 'ITGlobe Solutions',
       role: 'Full-stack',
       stack: ['Angular', 'Spring'],
-      tags: ['Angular', 'Spring', 'Étude de cas'],
+      tags: ['Angular'],
       imgs: ['assets/projects/itglobe/1.webp','assets/projects/itglobe/2.webp'],
       // demo: 'https://…',
       descShort: 'App de réservation et suivi pour une SSII fictive.',
@@ -128,7 +161,7 @@ export class ProjectsComponent {
       title: 'GamesUP',
       role: 'Frontend',
       stack: ['Angular', 'RxJS', 'TypeScript', 'HTML/CSS'],
-      tags: ['E-commerce', 'Recherche', 'Filtrage', 'Performance', 'Étude de cas'],
+      tags: ['Angular'],
       imgs: [
         'assets/projects/GameSup/1.webp','assets/projects/GameSup/2.webp',
         'assets/projects/GameSup/6.webp','assets/projects/GameSup/3.webp',
@@ -137,7 +170,7 @@ export class ProjectsComponent {
       // demo: 'https://…',
       descShort: 'Catalogue e-commerce de jeux de société avec recherche instantanée, tri et filtres.',
       descLong:
-        'Étude de cas Front Angular : catalogue + fiche produit, recherche multicritère (catégorie, éditeur, prix), tri/pagination, favoris, et optimisations de performance (OnPush/trackBy, lazy loading).',
+        'Étude de cas Front Angular : catalogue , fiche produit, recherche multicritère (catégorie, éditeur, prix), tri/pagination, favoris, et optimisations de performance (OnPush/trackBy, lazy loading).',
 
 
       problemSolutionImpact: {
@@ -150,7 +183,7 @@ export class ProjectsComponent {
         'Filtres combinables en temps réel (catégorie, éditeur, prix, note).',
         'Tri & pagination avec état d’URL partageable.',
         'Virtual scroll / trackBy pour listes volumineuses.',
-        'Services typés + interceptors (gestion erreurs/chargement).',
+        'Services typés , interceptors (gestion erreurs/chargement).',
         'Tests unitaires clés (pipes, services) et accessibilité de base (ARIA).'
       ]
     },
@@ -158,20 +191,14 @@ export class ProjectsComponent {
       title: 'PMT — Project Management Tool',
       role: 'Full-stack',
       stack: ['Angular', 'Spring'],
-      tags: ['Angular', 'Spring', 'Étude de cas'],
+      tags: ['Angular'],
       imgs: ['assets/projects/PMT/1.webp','assets/projects/itglobe/2.webp'],
       // demo: 'https://…',
       descShort: 'Gestion de projet avec rôles, tâches, permissions.',
-      descLong:  'Auth, autorisations, API REST Spring Boot + UI Angular.'
+      descLong:  'Auth, autorisations, API REST Spring Boot , UI Angular.'
     },
-    {
-      title: 'Jeu Unity3D',
-      role: 'Gameplay',
-      stack: ['Unity', 'C#'],
-      tags: ['Unity'],
-      // img: 'assets/unity.webp',
-      descShort: 'Prototype 3D d’exploration (C# + Unity).'
-    }
+
+
   ];
 
   get filtered(): Project[] {
