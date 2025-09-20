@@ -46,7 +46,7 @@ export class ProjectsComponent {
       ],
 
       descShort:
-        'UI existante à optimiser et logique couplée. Refonte WPF MVVM et polish UX pour un flux plus fluides et une maintenance facilitée.',
+        'UI existante à optimiser. Refonte WPF MVVM et polish UX pour un flux plus fluide et une maintenance facilitée.',
 
       descLong:
         'Interventions sur l’app WPF : modernisation XAML, découplage MVVM, petites features (navigation, listes, validations), corrections de bugs et améliorations de réactivité. Qualité via PR Git, conventions & build CI (GitHub Actions).',
@@ -64,7 +64,7 @@ export class ProjectsComponent {
       title: 'Météo & Citation (Android)',
       role: 'Mobile',
       stack: ['Kotlin', 'Android', 'Views XML', 'Coroutines'],
-      tags: ['Android'], // ← doit matcher le filtre
+      tags: ['Android'],
       imgs: [
         'assets/projects/meteo/1.webp',
         'assets/projects/meteo/2.webp',
@@ -72,8 +72,8 @@ export class ProjectsComponent {
         'assets/projects/meteo/4.webp',
         'assets/projects/meteo/5.webp',
       ],
-      // demo: 'https://…',    // (lien Play Store / vidéo / APK si tu veux)
-      // code: 'https://…',    // (repo si public)
+      demo: 'https://play.google.com/store/apps/details?id=com.valerie.meteoquote&pcampaignid=web_share',
+
       descShort:
         'App météo (actuelle • 24h • 7j) + citation liée au temps, recherche et favoris, thème dynamique.',
       descLong:
