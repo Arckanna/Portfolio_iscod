@@ -44,7 +44,7 @@ export class ProjectsComponent {
         'assets/projects/moduleo/1.webp',
         'assets/projects/moduleo/2.webp'
       ],
-
+      demo:'https://www.kipaware.fr/',
       descShort:
         'UI existante à optimiser. Refonte WPF MVVM et polish UX pour un flux plus fluide et une maintenance facilitée.',
 
