@@ -150,7 +150,7 @@ export class ProjectsComponent {
 
       imgs: [
         'assets/projects/itglobe/1.webp',
-        'assets/projects/itglobe/2.webp'
+        'assets/projects/itglobe/3.webp'
       ],
 
       descShort:
