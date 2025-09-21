@@ -118,9 +118,9 @@ export class ProjectsComponent {
         'assets/projects/abrarobotix/1.webp',
         'assets/projects/abrarobotix/2.webp'
       ],
-     
+
       descShort:
-        'Créer un bras accessible → 20 pièces 3D + 4 servos Arduino → contrôle précis et look “roi des machines”.',
+        'Créer un bras accessible , contrôle précis et look “roi des machines”.',
 
       descLong:
         'Bras robotique 3 axes avec pince, ~20 pièces imprimées en 3D. Programmation via Snap4Arduino/Arduino : ' +
@@ -143,14 +143,32 @@ export class ProjectsComponent {
       descShort: 'Prototype 3D d’exploration (C# , Unity).'
     },
     {
-      title: 'ITGlobe Solutions',
-      role: 'Full-stack',
-      stack: ['Angular', 'Spring'],
-      tags: ['Angular'],
-      imgs: ['assets/projects/itglobe/1.webp','assets/projects/itglobe/2.webp'],
-      // demo: 'https://…',
-      descShort: 'App de réservation et suivi pour une SSII fictive.',
-      descLong:  'Planification, réservations, Angular + API Spring Boot.'
+      title: 'ITGlobe Solutions — SIRH (étude de cas)',
+      role: 'Architecture & CDC',
+      stack: ['Angular', 'Spring Boot', 'PostgreSQL'],
+      tags: ['Étude de cas', 'Angular', 'Spring'],
+
+      imgs: [
+        'assets/projects/itglobe/1.webp',
+        'assets/projects/itglobe/2.webp'
+      ],
+
+      descShort:
+        'RH éclatées & manuelles → SIRH unifié et automatisation → données fiables et décisions éclairées.',
+
+      descLong:
+        'Étude de cas RH : proposition d’un SIRH centralisé pour un e-commerçant multi-pays. ' +
+        'Livrables : cahier des charges, diagramme d’architecture (SPA Angular + API Spring + DB), intégrations (Salesforce/HubSpot), ' +
+        'exigences RGPD & sécurité, et étude comparative chiffrée (Rippling, Bizneo HR, Factorial).',
+
+      highlights: [
+        'Constats initiaux : systèmes disparates, peu d’automatisation, données RH sous-exploitées, suivi formation absent.',
+        'Objectifs : unifier, automatiser, analyser (dashboards), s’adapter aux pays et soutenir la croissance.',
+        'Modules cibles : Recrutement, Employés, Performances, Formation, Congés, Analytics, Administration.',
+        'Architecture proposée : SPA Angular, API Spring Boot, BD centrale, intégrations Salesforce/HubSpot, Slack/Zoom.',
+        'Non-fonctionnels : RGPD, sécurité (auth/roles), interopérabilité, performance & scalabilité.',
+        'Benchmark & macro-chiffrage : comparaison Rippling / Bizneo HR / Factorial avec budgets & calendriers.'
+      ]
     },
     {
       title: 'O’Fit',
