@@ -39,7 +39,7 @@ export class ProjectsComponent {
       title: 'Moduleo (Kipaware) — App métier WPF',
       role: 'C#/.NET — WPF (MVVM)',
       stack: ['C#', '.NET', 'WPF', 'MVVM'],
-      tags: ['C#/.NET'], // ← doit matcher le filtre
+      tags: ['C#/.NET'],
       imgs: [
         'assets/projects/moduleo/1.webp',
         'assets/projects/moduleo/2.webp'
@@ -112,20 +112,26 @@ export class ProjectsComponent {
     {
       title: 'Abrarobotix (bras robotique 3D + Arduino)',
       role: 'Maker / Contrôle',
-      stack: ['Arduino', 'Impression 3D'],
+      stack: ['Arduino', 'Impression 3D', 'C++', 'Snap4Arduino'],
       tags: ['Robotique'],
       imgs: [
         'assets/projects/abrarobotix/1.webp',
-        //'assets/projects/abrarobotix/2.webp'
+        'assets/projects/abrarobotix/2.webp'
       ],
-      // demo: 'https://…',
-      descShort: 'Bras robotique imprimé en 3D, piloté par Arduino.',
-      descLong:  'Conception, impression 3D, assemblage et contrôle de 4 servo-moteurs (rotation, vertical/horizontal, pince). Programmation Arduino (C++).',
+     
+      descShort:
+        'Créer un bras accessible → 20 pièces 3D + 4 servos Arduino → contrôle précis et look “roi des machines”.',
+
+      descLong:
+        'Bras robotique 3 axes avec pince, ~20 pièces imprimées en 3D. Programmation via Snap4Arduino/Arduino : ' +
+        'contrôle clavier des 4 servos, enregistrement de poses et lecture séquencée pour des mouvements fluides.',
       highlights: [
-        'Conception & impression 3D des pièces (bras + pince)',
-        '4 servomoteurs : rotation, vertical, horizontal, pince',
-        'Pilotage Arduino (C++) — mapping angles → PWM',
-        'Calibration des limites mécaniques & vitesses adoucies'
+        '3 axes + pince (4 DOF) — ~20 pièces 3D à assembler',
+        'Pilotage clavier par pas de 2° (0→180°) sur 4 servos',
+        'Moteurs sur pins 4, 7, 8, 9 (M1, M2, M3, MP)',
+        'Raccourcis : q/a (M1), s/z (M2), d/e (M3), ↑/↓ (MP)',
+        'Enregistrement de poses (touche P) dans des listes',
+        'Lecture automatique de la séquence (Espace) avec tempo'
       ]
     },
     {
