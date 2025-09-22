@@ -58,28 +58,24 @@ export class ProjectsComponent {
       ]
     },
     {
-      title: 'Moduleo (Kipaware) — App métier WPF',
-      role: 'C#/.NET — WPF (MVVM)',
-      stack: ['C#', '.NET', 'WPF', 'MVVM'],
+      title: 'Moduleo — Maintenance & petites features',
+      role: 'C#/.NET — WPF',
+      stack: ['C#', '.NET', 'WPF', 'XAML'],
       tags: ['C#/.NET'],
       imgs: [
-        'assets/projects/moduleo/1.webp',
-        'assets/projects/moduleo/2.webp'
+        'assets/projects/moduleo-tickets/1.webp',
+        'assets/projects/moduleo-tickets/2.webp'
       ],
-      demo:'https://www.kipaware.fr/',
       descShort:
-        'UI existante à optimiser. Refonte WPF MVVM et polish UX pour un flux plus fluide et une maintenance facilitée.',
-
+        'Tickets utilisateurs → repro + correctifs + petites features → qualité perçue et délais tenus.',
       descLong:
-        'Interventions sur l’app WPF : modernisation XAML, découplage MVVM, petites features (navigation, listes, validations), corrections de bugs et améliorations de réactivité. Qualité via PR Git, conventions & build CI (GitHub Actions).',
-
+        'Traitement de demandes et bugs : triage, reproduction, corrections, PR/reviews et validation. ' +
+        'Améliorations ciblées d’UI/UX, micro-optimisations et ajustements de workflows au fil des retours.',
       highlights: [
-        'Refonte d’écrans WPF (XAML), styles & templates',
-        'Alignement MVVM (ViewModel/Command), moins de logique code-behind',
-        'Petites features : filtres, validations, navigations',
-        'Réactivité UI : virtualisation des listes, micro-optimisations',
-        'Accessibilité : libellés, focus, tab order',
-        'Qualité : PR/reviews, analyzers, build CI GitHub Actions'
+        'Triage/repro des tickets, corrections et PR systématiques',
+        'Améliorations UI : libellés, états de validation, raccourcis',
+        'Micro-optimisations (listes, chargements, navigation)',
+        'Collaboration support/QA, communication claire des changements'
       ]
     },
     {
