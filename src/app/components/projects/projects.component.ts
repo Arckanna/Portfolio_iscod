@@ -36,6 +36,53 @@ export class ProjectsComponent {
 
   projects: Project[] = [
     {
+      title: 'Moduleo — Outil versions BDD (interne)',
+      role: 'C#/.NET — utilitaire équipe',
+      stack: ['C#', '.NET', 'WPF', 'SQL'],
+      tags: ['C#/.NET'],
+      imgs: [
+        'assets/projects/moduleo-tool/1.webp',
+        'assets/projects/moduleo-tool/2.webp'
+      ],
+      // demo/code : internes → on laisse vide
+      descShort:
+        'Mises à niveau sensibles → outil d’inspection & upgrade guidé → versions maîtrisées, erreurs évitées.',
+      descLong:
+        'Petit utilitaire pour l’équipe : détecte la version de schéma, propose une cible, enchaîne scripts/migrations et trace les résultats. ' +
+        'Objectif : sécuriser les mises à jour et gagner du temps lors des demandes de support.',
+      highlights: [
+        'Détection de la version de schéma + choix de la version cible',
+        'Exécution pas à pas des scripts/migrations avec journalisation',
+        'Vérifications préalables (validation) et messages d’erreur clairs',
+        'UX simple pour l’équipe (moins d’allers-retours, moins de risques)'
+      ]
+    },
+    {
+      title: 'Moduleo (Kipaware) — App métier WPF',
+      role: 'C#/.NET — WPF (MVVM)',
+      stack: ['C#', '.NET', 'WPF', 'MVVM'],
+      tags: ['C#/.NET'],
+      imgs: [
+        'assets/projects/moduleo/1.webp',
+        'assets/projects/moduleo/2.webp'
+      ],
+      demo:'https://www.kipaware.fr/',
+      descShort:
+        'UI existante à optimiser. Refonte WPF MVVM et polish UX pour un flux plus fluide et une maintenance facilitée.',
+
+      descLong:
+        'Interventions sur l’app WPF : modernisation XAML, découplage MVVM, petites features (navigation, listes, validations), corrections de bugs et améliorations de réactivité. Qualité via PR Git, conventions & build CI (GitHub Actions).',
+
+      highlights: [
+        'Refonte d’écrans WPF (XAML), styles & templates',
+        'Alignement MVVM (ViewModel/Command), moins de logique code-behind',
+        'Petites features : filtres, validations, navigations',
+        'Réactivité UI : virtualisation des listes, micro-optimisations',
+        'Accessibilité : libellés, focus, tab order',
+        'Qualité : PR/reviews, analyzers, build CI GitHub Actions'
+      ]
+    },
+    {
       title: 'Moduleo (Kipaware) — App métier WPF',
       role: 'C#/.NET — WPF (MVVM)',
       stack: ['C#', '.NET', 'WPF', 'MVVM'],
@@ -118,10 +165,8 @@ export class ProjectsComponent {
         'assets/projects/abrarobotix/1.webp',
         'assets/projects/abrarobotix/2.webp'
       ],
-
       descShort:
         'Créer un bras accessible , contrôle précis et look “roi des machines”.',
-
       descLong:
         'Bras robotique 3 axes avec pince, ~20 pièces imprimées en 3D. Programmation via Snap4Arduino/Arduino : ' +
         'contrôle clavier des 4 servos, enregistrement de poses et lecture séquencée pour des mouvements fluides.',
@@ -221,8 +266,6 @@ export class ProjectsComponent {
       descShort: 'Gestion de projet avec rôles, tâches, permissions.',
       descLong:  'Auth, autorisations, API REST Spring Boot , UI Angular.'
     },
-
-
   ];
 
   get filtered(): Project[] {
