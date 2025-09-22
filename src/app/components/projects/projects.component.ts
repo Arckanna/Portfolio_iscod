@@ -79,28 +79,28 @@ export class ProjectsComponent {
       ]
     },
     {
-      title: 'Moduleo (Kipaware) — App métier WPF',
+      title: 'Moduleo — Refonte WPF (MVVM & UX)',
       role: 'C#/.NET — WPF (MVVM)',
       stack: ['C#', '.NET', 'WPF', 'MVVM'],
       tags: ['C#/.NET'],
       imgs: [
-        'assets/projects/moduleo/1.webp',
-        'assets/projects/moduleo/2.webp'
+        'assets/projects/moduleo-refonte/1.webp',
+        'assets/projects/moduleo-refonte/2.webp'
       ],
-      demo:'https://www.kipaware.fr/',
+      // 🟢 Pb → Sol → Impact (ultra-court)
       descShort:
-        'UI existante à optimiser. Refonte WPF MVVM et polish UX pour un flux plus fluide et une maintenance facilitée.',
-
+        'Logique couplée → MVVM + XAML factorisé → parcours plus clairs & maintenance simplifiée.',
+      // 🟣 Popup détaillée (neutre / positive)
       descLong:
-        'Interventions sur l’app WPF : modernisation XAML, découplage MVVM, petites features (navigation, listes, validations), corrections de bugs et améliorations de réactivité. Qualité via PR Git, conventions & build CI (GitHub Actions).',
-
+        'Harmonisation XAML (styles/templates), composants réutilisables, navigation et validations plus nettes. ' +
+        'Séparation ViewModel/Command, réduction du code-behind et amélioration de l’accessibilité. ' +
+        'Qualité renforcée via PR, analyzers et build CI.',
       highlights: [
-        'Refonte d’écrans WPF (XAML), styles & templates',
-        'Alignement MVVM (ViewModel/Command), moins de logique code-behind',
-        'Petites features : filtres, validations, navigations',
-        'Réactivité UI : virtualisation des listes, micro-optimisations',
-        'Accessibilité : libellés, focus, tab order',
-        'Qualité : PR/reviews, analyzers, build CI GitHub Actions'
+        'Architecture MVVM : ViewModels/Commands, découplage propre',
+        'Styles/templates unifiés, composants réutilisables',
+        'Navigation & validations : flux plus lisibles',
+        'Accessibilité : focus, libellés, ordre de tabulation',
+        'Qualité : PR/reviews, analyzers, build CI'
       ]
     },
     {
