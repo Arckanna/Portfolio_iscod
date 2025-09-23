@@ -176,14 +176,6 @@ export class ProjectsComponent {
       ]
     },
     {
-      title: 'Jeu Unity3D',
-      role: 'Gameplay',
-      stack: ['Unity', 'C#'],
-      tags: ['Unity'],
-      // img: 'assets/unity.webp',
-      descShort: 'Prototype 3D d’exploration (C# , Unity).'
-    },
-    {
       title: 'ITGlobe Solutions — SIRH (étude de cas)',
       role: 'Architecture & CDC',
       stack: ['Angular', 'Spring Boot', 'PostgreSQL'],
@@ -212,16 +204,35 @@ export class ProjectsComponent {
       ]
     },
     {
-      title: 'O’Fit',
-      role: 'Frontend',
-      stack: ['Angular'],
-      tags: ['Angular'],
-      imgs: [ 'assets/projects/ofit/1.webp',
-        'https://picsum.photos/seed/itglobe2/1200/675'],
-      // demo: 'https://…',
-      descShort: 'Coaching sportif, UI intuitive & suivi de progression.',
-      descLong:  'Responsive mobile-first, stats perso, Angular.'
-    },
+      title: "O’Fit — Santé connectée (étude de cas)",
+      role: "Chef de projet (pilotage)",
+      stack: ["Agile/Scrum", "RGPD", "WBS", "KPI & Risques", "UX/Design ops"],
+      tags: [],
+      imgs: [
+        "assets/projects/ofit/1.webp",
+        "assets/projects/ofit/2.webp"
+      ],
+
+
+      descShort:
+        "Équipe à distance & retards → V1 centrée (activité, journal, sommeil, dashboard) + cadre RGPD → roadmap claire & suivi factuel.",
+
+
+      descLong:
+        "Cadrage produit d’une app santé : spécifications sous user stories, WBS par domaines et V1 priorisée (activité, journal alimentaire, sommeil, tableau de bord). " +
+        "Mise en place d’indicateurs (sprints, burndown, tests, bugs, satisfaction) et matrice des risques, puis audit de l’organisation remote avec plan d’amélioration (outils, rituels, responsabilités) conforme RGPD.",
+
+     
+      highlights: [
+        "Objectifs : intuitivité/engagement, personnalisation, sécurité & confidentialité (RGPD).",
+        "V1 priorisée : Suivi activité • Journal alimentaire • Sommeil • Dashboard.",
+        "WBS & domaines fonctionnels → lots de travail cohérents.",
+        "KPI : progression des sprints, burndown, taux de tests, bugs, satisfaction.",
+        "Matrice des risques : techniques, humains, juridiques, délais + mitigations.",
+        "Audit équipe remote : JIRA/Trello, Slack/Teams, Confluence, ajout Miro & rituels ; clarification des rôles."
+      ]
+    }
+    ,
     {
       title: 'GamesUP',
       role: 'Frontend',
