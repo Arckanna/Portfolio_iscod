@@ -44,7 +44,6 @@ export class ProjectsComponent {
         'assets/projects/moduleo-tool/1.webp',
         'assets/projects/moduleo-tool/2.webp'
       ],
-      // demo/code : internes → on laisse vide
       descShort:
         'Mises à niveau sensibles → outil d’inspection & upgrade guidé → versions maîtrisées, erreurs évitées.',
       descLong:
@@ -87,10 +86,8 @@ export class ProjectsComponent {
         'assets/projects/moduleo-refonte/1.webp',
         'assets/projects/moduleo-refonte/2.webp'
       ],
-      // 🟢 Pb → Sol → Impact (ultra-court)
       descShort:
         'Logique couplée → MVVM + XAML factorisé → parcours plus clairs & maintenance simplifiée.',
-      // 🟣 Popup détaillée (neutre / positive)
       descLong:
         'Harmonisation XAML (styles/templates), composants réutilisables, navigation et validations plus nettes. ' +
         'Séparation ViewModel/Command, réduction du code-behind et amélioration de l’accessibilité. ' +
@@ -185,10 +182,8 @@ export class ProjectsComponent {
         'assets/projects/itglobe/1.webp',
         'assets/projects/itglobe/3.webp'
       ],
-
       descShort:
         'RH éclatées & manuelles → SIRH unifié et automatisation → données fiables et décisions éclairées.',
-
       descLong:
         'Étude de cas RH : proposition d’un SIRH centralisé pour un e-commerçant multi-pays. ' +
         'Livrables : cahier des charges, diagramme d’architecture (SPA Angular + API Spring + DB), intégrations (Salesforce/HubSpot), ' +
@@ -212,17 +207,11 @@ export class ProjectsComponent {
         "assets/projects/ofit/1.webp",
         "assets/projects/ofit/2.webp"
       ],
-
-
       descShort:
         "Équipe à distance & retards → V1 centrée (activité, journal, sommeil, dashboard) + cadre RGPD → roadmap claire & suivi factuel.",
-
-
       descLong:
         "Cadrage produit d’une app santé : spécifications sous user stories, WBS par domaines et V1 priorisée (activité, journal alimentaire, sommeil, tableau de bord). " +
         "Mise en place d’indicateurs (sprints, burndown, tests, bugs, satisfaction) et matrice des risques, puis audit de l’organisation remote avec plan d’amélioration (outils, rituels, responsabilités) conforme RGPD.",
-
-     
       highlights: [
         "Objectifs : intuitivité/engagement, personnalisation, sécurité & confidentialité (RGPD).",
         "V1 priorisée : Suivi activité • Journal alimentaire • Sommeil • Dashboard.",
@@ -231,8 +220,7 @@ export class ProjectsComponent {
         "Matrice des risques : techniques, humains, juridiques, délais + mitigations.",
         "Audit équipe remote : JIRA/Trello, Slack/Teams, Confluence, ajout Miro & rituels ; clarification des rôles."
       ]
-    }
-    ,
+    },
     {
       title: 'GamesUP',
       role: 'Frontend',
@@ -247,14 +235,11 @@ export class ProjectsComponent {
       descShort: 'Catalogue e-commerce de jeux de société avec recherche instantanée, tri et filtres.',
       descLong:
         'Étude de cas Front Angular : catalogue , fiche produit, recherche multicritère (catégorie, éditeur, prix), tri/pagination, favoris, et optimisations de performance (OnPush/trackBy, lazy loading).',
-
-
       problemSolutionImpact: {
         problem: 'Bugs et lenteurs sur la recherche entraînant des paniers perdus.',
         solution: 'Refonte du front Angular : filtres réactifs (RxJS), debounce, pagination côté API, et stratégie OnPush.',
         impact: 'Interface plus fluide, temps de rendu réduit et parcours d’achat clarifié.'
       },
-
       highlights: [
         'Filtres combinables en temps réel (catégorie, éditeur, prix, note).',
         'Tri & pagination avec état d’URL partageable.',
@@ -266,13 +251,28 @@ export class ProjectsComponent {
     {
       title: 'PMT — Project Management Tool',
       role: 'Full-stack',
-      stack: ['Angular', 'Spring'],
-      tags: ['Angular'],
-      imgs: ['assets/projects/PMT/1.webp','assets/projects/itglobe/2.webp'],
-      // demo: 'https://…',
-      descShort: 'Gestion de projet avec rôles, tâches, permissions.',
-      descLong:  'Auth, autorisations, API REST Spring Boot , UI Angular.'
-    },
+      stack: ['Angular', 'Spring Boot', 'JWT', 'PostgreSQL'],
+      tags: ['Étude de cas', 'Angular', 'Spring'],
+      imgs: [
+        'assets/projects/pmt/1.webp',
+        'assets/projects/pmt/2.webp'
+      ],
+      descShort:
+        'Organisation des tâches peu claire → app Angular + Spring (rôles, permissions, workflow) → assignations plus rapides & meilleure visibilité.',
+      descLong:
+        'Conception d’un outil de gestion de projet : rôles & permissions, tâches, statuts, commentaires et audits. ' +
+        'Refacto après revue : architecture 3 couches (Controller → Service → Repository) + DTO/validation ; ' +
+        'pipeline CI/CD découpé en jobs (lint, tests, build, packaging).',
+      highlights: [
+        'Sécurité : Auth JWT, guards côté front, RBAC (rôles/permissions)',
+        'Architecture : Controller → Service (@Transactional) → Repository',
+        'DTO + Bean Validation (Jakarta) + mappers (MapStruct ou manuel)',
+        'Gestion erreurs : exceptions métier → handlers globaux (RFC7807)',
+        'Tests : JUnit/Mockito back, Cypress/Jest front (selon besoin)',
+        'CI/CD : jobs séparés (lint/test/build) + cache + artefacts'
+      ]
+    }
+    ,
   ];
 
   get filtered(): Project[] {
