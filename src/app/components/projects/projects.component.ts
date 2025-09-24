@@ -180,7 +180,7 @@ export class ProjectsComponent {
 
       imgs: [
         'assets/projects/itglobe/1.webp',
-        'assets/projects/itglobe/3.webp'
+        'assets/projects/itglobe/2.webp'
       ],
       descShort:
         'RH éclatées & manuelles → SIRH unifié et automatisation → données fiables et décisions éclairées.',
@@ -254,8 +254,8 @@ export class ProjectsComponent {
       stack: ['Angular', 'Spring Boot', 'JWT', 'PostgreSQL'],
       tags: ['Étude de cas', 'Angular', 'Spring'],
       imgs: [
-        'assets/projects/pmt/1.webp',
-        'assets/projects/pmt/2.webp'
+        'assets/projects/PMT/1.webp',
+        'assets/projects/PMT/2.webp'
       ],
       descShort:
         'Organisation des tâches peu claire → app Angular + Spring (rôles, permissions, workflow) → assignations plus rapides & meilleure visibilité.',
