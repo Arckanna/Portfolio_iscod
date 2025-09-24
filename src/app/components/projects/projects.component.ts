@@ -31,7 +31,7 @@ type Project = {
 export class ProjectsComponent {
   constructor(private dialog: MatDialog) {}
 
-  filters = ['Tous', 'Angular', 'Unity', 'Android', 'Robotique', 'C#/.NET'];
+  filters = ['Tous', 'C#/.NET', 'Angular',  'Android','Unity', 'Robotique'];
   active = 'Tous';
 
   projects: Project[] = [
@@ -41,8 +41,8 @@ export class ProjectsComponent {
       stack: ['C#', '.NET', 'WPF', 'SQL'],
       tags: ['C#/.NET'],
       imgs: [
-        'assets/projects/moduleo-tool/1.webp',
-        'assets/projects/moduleo-tool/2.webp'
+        'assets/projects/moduleo/1.webp',
+        'assets/projects/moduleo/2.webp'
       ],
       descShort:
         'Mises à niveau sensibles → outil d’inspection & upgrade guidé → versions maîtrisées, erreurs évitées.',
@@ -62,16 +62,16 @@ export class ProjectsComponent {
       stack: ['C#', '.NET', 'WPF', 'XAML'],
       tags: ['C#/.NET'],
       imgs: [
-        'assets/projects/moduleo-tickets/1.webp',
-        'assets/projects/moduleo-tickets/2.webp'
+        'assets/projects/moduleo/1.webp',
+        'assets/projects/moduleo/2.webp'
       ],
       descShort:
-        'Tickets utilisateurs → repro + correctifs + petites features → qualité perçue et délais tenus.',
+        'Tickets utilisateurs ,repro , correctifs et petites features.',
       descLong:
-        'Traitement de demandes et bugs : triage, reproduction, corrections, PR/reviews et validation. ' +
+        'Traitement de demandes et bugs : reproduction, corrections, PR/reviews et validation. ' +
         'Améliorations ciblées d’UI/UX, micro-optimisations et ajustements de workflows au fil des retours.',
       highlights: [
-        'Triage/repro des tickets, corrections et PR systématiques',
+        'Repro des tickets, corrections et PR systématiques',
         'Améliorations UI : libellés, états de validation, raccourcis',
         'Micro-optimisations (listes, chargements, navigation)',
         'Collaboration support/QA, communication claire des changements'
@@ -83,8 +83,8 @@ export class ProjectsComponent {
       stack: ['C#', '.NET', 'WPF', 'MVVM'],
       tags: ['C#/.NET'],
       imgs: [
-        'assets/projects/moduleo-refonte/1.webp',
-        'assets/projects/moduleo-refonte/2.webp'
+        'assets/projects/moduleo/1.webp',
+        'assets/projects/moduleo/2.webp'
       ],
       descShort:
         'Logique couplée → MVVM + XAML factorisé → parcours plus clairs & maintenance simplifiée.',
