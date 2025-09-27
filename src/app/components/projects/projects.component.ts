@@ -37,8 +37,8 @@ export class ProjectsComponent {
   projects: Project[] = [
     {
       title: 'Moduleo — Outil versions BDD (interne)',
-      role: 'C#/.NET — utilitaire équipe',
-      stack: ['C#', '.NET', 'WPF', 'SQL'],
+      role: 'Utilitaire équipe',
+      stack: ['C#/.NET', 'WPF', 'SQL'],
       tags: ['C#/.NET'],
       imgs: [
         'assets/projects/moduleo/1.webp',
@@ -58,7 +58,7 @@ export class ProjectsComponent {
     },
     {
       title: 'Moduleo — Maintenance & petites features',
-      role: 'C#/.NET — WPF',
+      role: '',
       stack: ['C#', '.NET', 'WPF', 'XAML'],
       tags: ['C#/.NET'],
       imgs: [
@@ -79,7 +79,7 @@ export class ProjectsComponent {
     },
     {
       title: 'Moduleo — Refonte WPF (MVVM & UX)',
-      role: 'C#/.NET — WPF (MVVM)',
+      role: '',
       stack: ['C#', '.NET', 'WPF', 'MVVM'],
       tags: ['C#/.NET'],
       imgs: [
