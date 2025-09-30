@@ -109,8 +109,7 @@ export class ProjectsComponent {
         'assets/projects/meteo/1.webp',
         'assets/projects/meteo/2.webp',
         'assets/projects/meteo/3.webp',
-        'assets/projects/meteo/4.webp',
-        'assets/projects/meteo/5.webp',
+
       ],
       demo: 'https://play.google.com/store/apps/details?id=com.valerie.meteoquote&pcampaignid=web_share',
 
