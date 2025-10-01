@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
-import {
-  trigger,
-  query,
-  style,
-  transition,
-  animate,
-  stagger
-} from '@angular/animations';
+import { trigger, query, style, transition, animate, stagger } from '@angular/animations';
 
 @Component({
   selector: 'app-home',
@@ -26,8 +19,5 @@ import {
   ]
 })
 export class HomeComponent {
-  go(selector: string) {
-    const el = document.querySelector(selector);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
+  // plus besoin de go() si on utilise des liens d’ancre natifs
 }

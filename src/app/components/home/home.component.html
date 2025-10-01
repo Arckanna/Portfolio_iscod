@@ -1,14 +1,26 @@
-<div class="hero">
+<div class="hero" @staggerFadeInUp>
   <div class="hero__inner">
-    <p class="section-tag">// Accueil</p>
-    <h1 class="hero__title">Valérie Lecœur</h1>
-    <p class="hero__subtitle">Experte en Ingénierie du Logiciel— C#/.NET • Angular • Spring </p>
-    <p class="hero__cta">
-      <a class="btn btn-fill" (click)="go('#contact')">Engagez-moi</a>
-      <a class="btn btn-border" (click)="go('#projets')">Projets</a>
-      <a class="btn btn-ghost" href="assets/CV_Valerie_Lecoeur.pdf" download>Télécharger mon CV</a>
+    <p class="section-tag fade-item">// Accueil</p>
+
+    <h1 class="hero__title fade-item">Valérie Lecœur</h1>
+
+    <p class="hero__subtitle fade-item">
+      Experte en Ingénierie du Logiciel — C#/.NET • Kotlin • Angular • Spring
     </p>
-    <ul class="hero__badges">
+
+    <p class="hero__cta fade-item" role="group" aria-label="Appels à l’action">
+      <a class="btn btn-fill btn-primary" href="#contact" aria-label="Aller à la section contact">
+        Engagez-moi
+      </a>
+      <a class="btn btn-border" href="#projets" aria-label="Aller à la section projets">
+        Projets
+      </a>
+      <a class="btn btn-ghost" href="assets/CV_Valerie_Lecoeur.pdf" download aria-label="Télécharger mon CV">
+        Télécharger mon CV
+      </a>
+    </p>
+
+    <ul class="hero__badges fade-item" aria-label="Technologies clés">
       <li>C#/WPF</li>
       <li>Angular</li>
       <li>Spring Boot</li>
@@ -16,6 +28,7 @@
       <li>CI/CD</li>
     </ul>
   </div>
-  <!-- zone visuelle à droite  -->
-  <!-- <div class="hero__visual"></div> -->
+
+  <!-- Panneau visuel à droite, arrondi en haut-droite -->
+  <div class="hero__visual" aria-hidden="true"></div>
 </div>

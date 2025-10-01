@@ -1,64 +1,91 @@
-/* === Hero (inspiré de l’ancien site, version sombre moderne) === */
+@use 'sass:color';
+
+/* Layout de la hero : 2 colonnes avec panneau visuel à droite */
 .hero {
-  min-height: 72vh;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1.6fr .4fr;
   align-items: center;
-  padding: 24px 16px;
-  background:
-    radial-gradient(1200px 600px at 80% 20%, rgba(100,255,218,.08), transparent 60%),
-    linear-gradient(180deg, rgba(11,15,20,1) 0%, rgba(11,15,20,.6) 100%);
+  gap: 24px;
+  min-height: min(84vh, 780px);
+  padding: 16px;
 }
-.hero__inner { max-width: 1000px; margin: 0 auto; }
-.hero__title   { font-size: clamp(32px, 6vw, 56px); margin: 6px 0 0; font-weight: 700; }
-.hero__subtitle{ color: var(--muted); font-size: clamp(16px, 2.8vw, 20px); margin: 10px 0 0; }
 
-.hero__cta { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+.hero__inner {
+  max-width: 820px;
+  margin: 0 auto 0 0;
+}
 
-/* Boutons façon “btn-fill / btn-border” */
-.btn {
-  display: inline-block;
-  border-radius: 12px;
-  padding: 10px 16px;
-  border: 1px solid var(--border);
-  text-decoration: none;
-  cursor: pointer;
-  user-select: none;
+.hero__title {
+  font-size: clamp(36px, 6vw, 56px);
+  line-height: 1.08;
+  margin: 8px 0 6px;
 }
-.btn-fill {
-  border-color: color-mix(in srgb, var(--accent) 60%, transparent);
-  background: color-mix(in srgb, var(--accent) 12%, transparent);
+
+.hero__subtitle {
+  color: color-mix(in srgb, var(--muted) 92%, #fff 8%);
+  margin: 0 0 14px;
+  font-size: clamp(16px, 2.6vw, 18px);
 }
-.btn-fill:hover {
-  background: color-mix(in srgb, var(--accent) 18%, transparent);
-}
-.btn-border:hover { background: #0e131a; }
-.btn-ghost { opacity: .9; }
-.btn-ghost:hover { opacity: 1; }
+
+.hero__cta .btn { margin-right: 8px; }
 
 .hero__badges {
-  list-style: none; padding: 0; margin: 16px 0 0;
-  display: flex; flex-wrap: wrap; gap: 8px;
+  display: flex; flex-wrap: wrap; gap: 8px 10px;
+  margin: 16px 0 0; padding: 0; list-style: none;
 }
 .hero__badges li {
-  font-size: 13px;
-  border: 1px solid var(--border);
-  background: #0e141b;
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--border));
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: #cfe9e3;
   padding: 6px 10px;
   border-radius: 999px;
-  color: var(--text);
+  font-size: 13px;
 }
 
-/* Version 2 colonnes (optionnelle si tu veux un visuel à droite) */
-@media (min-width: 980px) {
-  .hero { grid-template-columns: 1.2fr .8fr; }
-  .hero__inner { margin: 0; }
-  .hero__visual {
-    height: min(60vh, 520px);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    background:
-      radial-gradient(600px 400px at 50% 30%, rgba(100,255,218,.08), transparent 60%),
-      #0e141b;
+.hero__visual {
+  position: relative;
+  align-self: stretch;
+  min-height: 280px;
+
+  background:
+    radial-gradient(1200px 600px at 60% 20%, color-mix(in srgb, var(--accent) 8%, transparent), transparent 60%),
+    linear-gradient(180deg, #0e141b 0%, #0b0f14 60%);
+  border: 1px solid var(--border);
+
+  border-top-right-radius: 64px;
+  border-bottom-left-radius: 16px;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at center, color-mix(in srgb, var(--accent) 10%, transparent) 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: .25;
+    mix-blend-mode: screen;
+    pointer-events: none;
   }
+
+  &::after {
+    content: "";
+    position: absolute; width: 240px; height: 240px;
+    right: -40px; top: -40px;
+    background: radial-gradient(closest-side, color-mix(in srgb, var(--accent) 30%, transparent), transparent);
+    filter: blur(18px);
+    opacity: .7;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 920px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .hero__visual { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__visual::after { display: none; }
 }
